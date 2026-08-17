@@ -1,0 +1,2596 @@
+[
+  {
+    "route": "home",
+    "viewport": "desktop",
+    "size": [
+      1440,
+      900
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação que chama atenção. Tecnologia que sustenta o negócio.",
+        "size": 62.64,
+        "rect": {
+          "top": 216.015625,
+          "bottom": 470.328125,
+          "left": 100,
+          "right": 721.375
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1200,
+          "nh": 1500
+        }
+      ],
+      "bodyHeight": 3816,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/home-desktop.png"
+  },
+  {
+    "route": "home",
+    "viewport": "standard",
+    "size": [
+      1366,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação que chama atenção. Tecnologia que sustenta o negócio.",
+        "size": 59.421,
+        "rect": {
+          "top": 223.515625,
+          "bottom": 464.765625,
+          "left": 63,
+          "right": 687.203125
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1200,
+          "nh": 1500
+        }
+      ],
+      "bodyHeight": 3763,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/home-standard.png"
+  },
+  {
+    "route": "home",
+    "viewport": "laptop",
+    "size": [
+      1024,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação que chama atenção. Tecnologia que sustenta o negócio.",
+        "size": 46.4,
+        "rect": {
+          "top": 183.46875,
+          "bottom": 371.84375,
+          "left": 24,
+          "right": 548.484375
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1200,
+          "nh": 1500
+        }
+      ],
+      "bodyHeight": 3070,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/home-laptop.png"
+  },
+  {
+    "route": "home",
+    "viewport": "tablet",
+    "size": [
+      768,
+      1024
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação que chama atenção. Tecnologia que sustenta o negócio.",
+        "size": 50.4,
+        "rect": {
+          "top": 155.796875,
+          "bottom": 312.265625,
+          "left": 0,
+          "right": 720
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1200,
+          "nh": 1500
+        }
+      ],
+      "bodyHeight": 4503,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/home-tablet.png"
+  },
+  {
+    "route": "home",
+    "viewport": "mobile430",
+    "size": [
+      430,
+      932
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação que chama atenção. Tecnologia que sustenta o negócio.",
+        "size": 44.8,
+        "rect": {
+          "top": 143.015625,
+          "bottom": 328.453125,
+          "left": 0,
+          "right": 430
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1200,
+          "nh": 1500
+        }
+      ],
+      "bodyHeight": 4238,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/home-mobile430.png"
+  },
+  {
+    "route": "home",
+    "viewport": "mobile",
+    "size": [
+      390,
+      844
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação que chama atenção. Tecnologia que sustenta o negócio.",
+        "size": 42.12,
+        "rect": {
+          "top": 143.015625,
+          "bottom": 317.390625,
+          "left": 0,
+          "right": 390
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1200,
+          "nh": 1500
+        }
+      ],
+      "bodyHeight": 4131,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/home-mobile.png"
+  },
+  {
+    "route": "projetos",
+    "viewport": "desktop",
+    "size": [
+      1440,
+      900
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "offenders": [],
+      "h1": {
+        "text": "Projetos para mostrar como eu penso, desenho e construo.",
+        "size": 83.52,
+        "rect": {
+          "top": 234.796875,
+          "bottom": 480.328125,
+          "left": 100,
+          "right": 915.453125
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3476,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/projetos-desktop.png"
+  },
+  {
+    "route": "projetos",
+    "viewport": "standard",
+    "size": [
+      1366,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "offenders": [],
+      "h1": {
+        "text": "Projetos para mostrar como eu penso, desenho e construo.",
+        "size": 79.228,
+        "rect": {
+          "top": 231.734375,
+          "bottom": 464.65625,
+          "left": 63,
+          "right": 878.453125
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3411,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/projetos-standard.png"
+  },
+  {
+    "route": "projetos",
+    "viewport": "laptop",
+    "size": [
+      1024,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "offenders": [],
+      "h1": {
+        "text": "Projetos para mostrar como eu penso, desenho e construo.",
+        "size": 59.392,
+        "rect": {
+          "top": 200.953125,
+          "bottom": 375.515625,
+          "left": 24,
+          "right": 650
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 2824,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/projetos-laptop.png"
+  },
+  {
+    "route": "projetos",
+    "viewport": "tablet",
+    "size": [
+      768,
+      1024
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "offenders": [],
+      "h1": {
+        "text": "Projetos para mostrar como eu penso, desenho e construo.",
+        "size": 62.4,
+        "rect": {
+          "top": 152.796875,
+          "bottom": 343.71875,
+          "left": 0,
+          "right": 768
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 6253,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/projetos-tablet.png"
+  },
+  {
+    "route": "projetos",
+    "viewport": "mobile430",
+    "size": [
+      430,
+      932
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "offenders": [],
+      "h1": {
+        "text": "Projetos para mostrar como eu penso, desenho e construo.",
+        "size": 43,
+        "rect": {
+          "top": 152.015625,
+          "bottom": 283.59375,
+          "left": 0,
+          "right": 430
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 4663,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/projetos-mobile430.png"
+  },
+  {
+    "route": "projetos",
+    "viewport": "mobile",
+    "size": [
+      390,
+      844
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "offenders": [],
+      "h1": {
+        "text": "Projetos para mostrar como eu penso, desenho e construo.",
+        "size": 39.2,
+        "rect": {
+          "top": 152.015625,
+          "bottom": 271.96875,
+          "left": 0,
+          "right": 390
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 4472,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/projetos-mobile.png"
+  },
+  {
+    "route": "tecnologia",
+    "viewport": "desktop",
+    "size": [
+      1440,
+      900
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "offenders": [],
+      "h1": {
+        "text": "Tecnologia para transformar processo em produto e ideia em experiência.",
+        "size": 72,
+        "rect": {
+          "top": 235.796875,
+          "bottom": 734.65625,
+          "left": 100,
+          "right": 500.71875
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3220,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/tecnologia-desktop.png"
+  },
+  {
+    "route": "tecnologia",
+    "viewport": "standard",
+    "size": [
+      1366,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "offenders": [],
+      "h1": {
+        "text": "Tecnologia para transformar processo em produto e ideia em experiência.",
+        "size": 68.3,
+        "rect": {
+          "top": 232.734375,
+          "bottom": 706,
+          "left": 63,
+          "right": 463.859375
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3156,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/tecnologia-standard.png"
+  },
+  {
+    "route": "tecnologia",
+    "viewport": "laptop",
+    "size": [
+      1024,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "offenders": [],
+      "h1": {
+        "text": "Tecnologia para transformar processo em produto e ideia em experiência.",
+        "size": 51.2,
+        "rect": {
+          "top": 201.953125,
+          "bottom": 556.765625,
+          "left": 24,
+          "right": 344
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 2525,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/tecnologia-laptop.png"
+  },
+  {
+    "route": "tecnologia",
+    "viewport": "tablet",
+    "size": [
+      768,
+      1024
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "offenders": [],
+      "h1": {
+        "text": "Tecnologia para transformar processo em produto e ideia em experiência.",
+        "size": 62.4,
+        "rect": {
+          "top": 153.796875,
+          "bottom": 408.359375,
+          "left": 0,
+          "right": 720
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3778,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/tecnologia-tablet.png"
+  },
+  {
+    "route": "tecnologia",
+    "viewport": "mobile430",
+    "size": [
+      430,
+      932
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "offenders": [],
+      "h1": {
+        "text": "Tecnologia para transformar processo em produto e ideia em experiência.",
+        "size": 43,
+        "rect": {
+          "top": 153.015625,
+          "bottom": 328.453125,
+          "left": 0,
+          "right": 430
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3049,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/tecnologia-mobile430.png"
+  },
+  {
+    "route": "tecnologia",
+    "viewport": "mobile",
+    "size": [
+      390,
+      844
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "offenders": [],
+      "h1": {
+        "text": "Tecnologia para transformar processo em produto e ideia em experiência.",
+        "size": 39.2,
+        "rect": {
+          "top": 153.015625,
+          "bottom": 312.953125,
+          "left": 0,
+          "right": 390
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 2979,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/tecnologia-mobile.png"
+  },
+  {
+    "route": "marketing",
+    "viewport": "desktop",
+    "size": [
+      1440,
+      900
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação coerente para a marca ser lembrada pelo motivo certo.",
+        "size": 72,
+        "rect": {
+          "top": 235.796875,
+          "bottom": 592.125,
+          "left": 100,
+          "right": 594.375
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 2187,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/marketing-desktop.png"
+  },
+  {
+    "route": "marketing",
+    "viewport": "standard",
+    "size": [
+      1366,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação coerente para a marca ser lembrada pelo motivo certo.",
+        "size": 68.3,
+        "rect": {
+          "top": 232.734375,
+          "bottom": 570.78125,
+          "left": 63,
+          "right": 557.6875
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 2132,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/marketing-standard.png"
+  },
+  {
+    "route": "marketing",
+    "viewport": "laptop",
+    "size": [
+      1024,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação coerente para a marca ser lembrada pelo motivo certo.",
+        "size": 51.2,
+        "rect": {
+          "top": 209.46875,
+          "bottom": 462.90625,
+          "left": 24,
+          "right": 415.15625
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1906,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/marketing-laptop.png"
+  },
+  {
+    "route": "marketing",
+    "viewport": "tablet",
+    "size": [
+      768,
+      1024
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação coerente para a marca ser lembrada pelo motivo certo.",
+        "size": 62.4,
+        "rect": {
+          "top": 153.796875,
+          "bottom": 408.359375,
+          "left": 0,
+          "right": 720
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 5054,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/marketing-tablet.png"
+  },
+  {
+    "route": "marketing",
+    "viewport": "mobile430",
+    "size": [
+      430,
+      932
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação coerente para a marca ser lembrada pelo motivo certo.",
+        "size": 43,
+        "rect": {
+          "top": 153.015625,
+          "bottom": 328.453125,
+          "left": 0,
+          "right": 430
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3944,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/marketing-mobile430.png"
+  },
+  {
+    "route": "marketing",
+    "viewport": "mobile",
+    "size": [
+      390,
+      844
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "offenders": [],
+      "h1": {
+        "text": "Comunicação coerente para a marca ser lembrada pelo motivo certo.",
+        "size": 39.2,
+        "rect": {
+          "top": 153.015625,
+          "bottom": 312.953125,
+          "left": 0,
+          "right": 390
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3797,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/marketing-mobile.png"
+  },
+  {
+    "route": "sobre",
+    "viewport": "desktop",
+    "size": [
+      1440,
+      900
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "offenders": [],
+      "h1": {
+        "text": "Eu trabalho na interseção entre comunicação, design e tecnologia.",
+        "size": 77.76,
+        "rect": {
+          "top": 278.140625,
+          "bottom": 663.0625,
+          "left": 100,
+          "right": 704.375
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1000,
+          "nh": 1250
+        }
+      ],
+      "bodyHeight": 1365,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/sobre-desktop.png"
+  },
+  {
+    "route": "sobre",
+    "viewport": "standard",
+    "size": [
+      1366,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "offenders": [],
+      "h1": {
+        "text": "Eu trabalho na interseção entre comunicação, design e tecnologia.",
+        "size": 73.764,
+        "rect": {
+          "top": 287.046875,
+          "bottom": 652.125,
+          "left": 63,
+          "right": 670.546875
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1000,
+          "nh": 1250
+        }
+      ],
+      "bodyHeight": 1354,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/sobre-standard.png"
+  },
+  {
+    "route": "sobre",
+    "viewport": "laptop",
+    "size": [
+      1024,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "offenders": [],
+      "h1": {
+        "text": "Eu trabalho na interseção entre comunicação, design e tecnologia.",
+        "size": 55.296,
+        "rect": {
+          "top": 222.265625,
+          "bottom": 495.9375,
+          "left": 24,
+          "right": 504.40625
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1000,
+          "nh": 1250
+        }
+      ],
+      "bodyHeight": 1118,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/sobre-laptop.png"
+  },
+  {
+    "route": "sobre",
+    "viewport": "tablet",
+    "size": [
+      768,
+      1024
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "offenders": [],
+      "h1": {
+        "text": "Eu trabalho na interseção entre comunicação, design e tecnologia.",
+        "size": 62.4,
+        "rect": {
+          "top": 151.796875,
+          "bottom": 406.359375,
+          "left": 0,
+          "right": 720
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1000,
+          "nh": 1250
+        }
+      ],
+      "bodyHeight": 1998,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/sobre-tablet.png"
+  },
+  {
+    "route": "sobre",
+    "viewport": "mobile430",
+    "size": [
+      430,
+      932
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "offenders": [],
+      "h1": {
+        "text": "Eu trabalho na interseção entre comunicação, design e tecnologia.",
+        "size": 43,
+        "rect": {
+          "top": 151.015625,
+          "bottom": 326.453125,
+          "left": 0,
+          "right": 430
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1000,
+          "nh": 1250
+        }
+      ],
+      "bodyHeight": 1820,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/sobre-mobile430.png"
+  },
+  {
+    "route": "sobre",
+    "viewport": "mobile",
+    "size": [
+      390,
+      844
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "offenders": [],
+      "h1": {
+        "text": "Eu trabalho na interseção entre comunicação, design e tecnologia.",
+        "size": 39.2,
+        "rect": {
+          "top": 151.015625,
+          "bottom": 310.953125,
+          "left": 0,
+          "right": 390
+        }
+      },
+      "imgs": [
+        {
+          "src": "Lucas Cristofer",
+          "nw": 1000,
+          "nh": 1250
+        }
+      ],
+      "bodyHeight": 1755,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/sobre-mobile.png"
+  },
+  {
+    "route": "contato",
+    "viewport": "desktop",
+    "size": [
+      1440,
+      900
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "form_validation": true,
+      "form_valid_state": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "offenders": [],
+      "h1": {
+        "text": "Me conte o que você precisa colocar de pé.",
+        "size": 72,
+        "rect": {
+          "top": 222.984375,
+          "bottom": 508.046875,
+          "left": 100,
+          "right": 560.015625
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1323,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/contato-desktop.png"
+  },
+  {
+    "route": "contato",
+    "viewport": "standard",
+    "size": [
+      1366,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "offenders": [],
+      "h1": {
+        "text": "Me conte o que você precisa colocar de pé.",
+        "size": 68.3,
+        "rect": {
+          "top": 217.0625,
+          "bottom": 487.5,
+          "left": 63,
+          "right": 525.78125
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1287,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/contato-standard.png"
+  },
+  {
+    "route": "contato",
+    "viewport": "laptop",
+    "size": [
+      1024,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "offenders": [],
+      "h1": {
+        "text": "Me conte o que você precisa colocar de pé.",
+        "size": 51.2,
+        "rect": {
+          "top": 189.703125,
+          "bottom": 341.765625,
+          "left": 24,
+          "right": 390.15625
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1181,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/contato-laptop.png"
+  },
+  {
+    "route": "contato",
+    "viewport": "tablet",
+    "size": [
+      768,
+      1024
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "offenders": [],
+      "h1": {
+        "text": "Me conte o que você precisa colocar de pé.",
+        "size": 62.4,
+        "rect": {
+          "top": 151.796875,
+          "bottom": 279.078125,
+          "left": 0,
+          "right": 720
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1935,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/contato-tablet.png"
+  },
+  {
+    "route": "contato",
+    "viewport": "mobile430",
+    "size": [
+      430,
+      932
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "offenders": [],
+      "h1": {
+        "text": "Me conte o que você precisa colocar de pé.",
+        "size": 43,
+        "rect": {
+          "top": 151.015625,
+          "bottom": 238.734375,
+          "left": 0,
+          "right": 430
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 2066,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/contato-mobile430.png"
+  },
+  {
+    "route": "contato",
+    "viewport": "mobile",
+    "size": [
+      390,
+      844
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "offenders": [],
+      "h1": {
+        "text": "Me conte o que você precisa colocar de pé.",
+        "size": 39.2,
+        "rect": {
+          "top": 151.015625,
+          "bottom": 230.984375,
+          "left": 0,
+          "right": 390
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 2086,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/contato-mobile.png"
+  },
+  {
+    "route": "evo",
+    "viewport": "desktop",
+    "size": [
+      1440,
+      900
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "offenders": [],
+      "h1": {
+        "text": "EVO Gestão",
+        "size": 86.4,
+        "rect": {
+          "top": 271.359375,
+          "bottom": 435.515625,
+          "left": 100,
+          "right": 467.84375
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 4051,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/evo-desktop.png"
+  },
+  {
+    "route": "evo",
+    "viewport": "standard",
+    "size": [
+      1366,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "offenders": [],
+      "h1": {
+        "text": "EVO Gestão",
+        "size": 81.96,
+        "rect": {
+          "top": 272.859375,
+          "bottom": 428.546875,
+          "left": 63,
+          "right": 430.84375
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3990,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/evo-standard.png"
+  },
+  {
+    "route": "evo",
+    "viewport": "laptop",
+    "size": [
+      1024,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "offenders": [],
+      "h1": {
+        "text": "EVO Gestão",
+        "size": 61.44,
+        "rect": {
+          "top": 189.703125,
+          "bottom": 306.421875,
+          "left": 24,
+          "right": 324
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3561,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/evo-laptop.png"
+  },
+  {
+    "route": "evo",
+    "viewport": "tablet",
+    "size": [
+      768,
+      1024
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "offenders": [],
+      "h1": {
+        "text": "EVO Gestão",
+        "size": 62.4,
+        "rect": {
+          "top": 175.796875,
+          "bottom": 239.4375,
+          "left": 0,
+          "right": 768
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 5160,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/evo-tablet.png"
+  },
+  {
+    "route": "evo",
+    "viewport": "mobile430",
+    "size": [
+      430,
+      932
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "offenders": [],
+      "h1": {
+        "text": "EVO Gestão",
+        "size": 43,
+        "rect": {
+          "top": 175.015625,
+          "bottom": 218.875,
+          "left": 0,
+          "right": 430
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 6020,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/evo-mobile430.png"
+  },
+  {
+    "route": "evo",
+    "viewport": "mobile",
+    "size": [
+      390,
+      844
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "offenders": [],
+      "h1": {
+        "text": "EVO Gestão",
+        "size": 39.2,
+        "rect": {
+          "top": 175.015625,
+          "bottom": 215,
+          "left": 0,
+          "right": 390
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 6109,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/evo-mobile.png"
+  },
+  {
+    "route": "poupeme",
+    "viewport": "desktop",
+    "size": [
+      1440,
+      900
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "offenders": [],
+      "h1": {
+        "text": "POUPEME",
+        "size": 86.4,
+        "rect": {
+          "top": 312.390625,
+          "bottom": 394.46875,
+          "left": 100,
+          "right": 467.84375
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 4051,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/poupeme-desktop.png"
+  },
+  {
+    "route": "poupeme",
+    "viewport": "standard",
+    "size": [
+      1366,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "offenders": [],
+      "h1": {
+        "text": "POUPEME",
+        "size": 81.96,
+        "rect": {
+          "top": 311.78125,
+          "bottom": 389.625,
+          "left": 63,
+          "right": 430.84375
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3990,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/poupeme-standard.png"
+  },
+  {
+    "route": "poupeme",
+    "viewport": "laptop",
+    "size": [
+      1024,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "offenders": [],
+      "h1": {
+        "text": "POUPEME",
+        "size": 61.44,
+        "rect": {
+          "top": 204.8125,
+          "bottom": 263.171875,
+          "left": 24,
+          "right": 324
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 3561,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/poupeme-laptop.png"
+  },
+  {
+    "route": "poupeme",
+    "viewport": "tablet",
+    "size": [
+      768,
+      1024
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "offenders": [],
+      "h1": {
+        "text": "POUPEME",
+        "size": 62.4,
+        "rect": {
+          "top": 175.796875,
+          "bottom": 239.4375,
+          "left": 0,
+          "right": 768
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 5160,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/poupeme-tablet.png"
+  },
+  {
+    "route": "poupeme",
+    "viewport": "mobile430",
+    "size": [
+      430,
+      932
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "offenders": [],
+      "h1": {
+        "text": "POUPEME",
+        "size": 43,
+        "rect": {
+          "top": 175.015625,
+          "bottom": 218.875,
+          "left": 0,
+          "right": 430
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 6020,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/poupeme-mobile430.png"
+  },
+  {
+    "route": "poupeme",
+    "viewport": "mobile",
+    "size": [
+      390,
+      844
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "offenders": [],
+      "h1": {
+        "text": "POUPEME",
+        "size": 39.2,
+        "rect": {
+          "top": 175.015625,
+          "bottom": 215,
+          "left": 0,
+          "right": 390
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 6109,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/poupeme-mobile.png"
+  },
+  {
+    "route": "404",
+    "viewport": "desktop",
+    "size": [
+      1440,
+      900
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "offenders": [],
+      "h1": {
+        "text": "Essa página saiu do fluxo.",
+        "size": 86.4,
+        "rect": {
+          "top": 247.921875,
+          "bottom": 417.265625,
+          "left": 340,
+          "right": 1100
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1121,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/404-desktop.png"
+  },
+  {
+    "route": "404",
+    "viewport": "standard",
+    "size": [
+      1366,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1366,
+      "clientWidth": 1366,
+      "offenders": [],
+      "h1": {
+        "text": "Essa página saiu do fluxo.",
+        "size": 81.96,
+        "rect": {
+          "top": 206.078125,
+          "bottom": 366.703125,
+          "left": 303,
+          "right": 1063
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1019,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/404-standard.png"
+  },
+  {
+    "route": "404",
+    "viewport": "laptop",
+    "size": [
+      1024,
+      768
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 1024,
+      "clientWidth": 1024,
+      "offenders": [],
+      "h1": {
+        "text": "Essa página saiu do fluxo.",
+        "size": 61.44,
+        "rect": {
+          "top": 256.296875,
+          "bottom": 316.5,
+          "left": 132,
+          "right": 892
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 975,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/404-laptop.png"
+  },
+  {
+    "route": "404",
+    "viewport": "tablet",
+    "size": [
+      768,
+      1024
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 768,
+      "clientWidth": 768,
+      "offenders": [],
+      "h1": {
+        "text": "Essa página saiu do fluxo.",
+        "size": 48,
+        "rect": {
+          "top": 348.484375,
+          "bottom": 395.515625,
+          "left": 16,
+          "right": 752
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1467,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/404-tablet.png"
+  },
+  {
+    "route": "404",
+    "viewport": "mobile430",
+    "size": [
+      430,
+      932
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 430,
+      "clientWidth": 430,
+      "offenders": [],
+      "h1": {
+        "text": "Essa página saiu do fluxo.",
+        "size": 48,
+        "rect": {
+          "top": 293.15625,
+          "bottom": 387.21875,
+          "left": 14,
+          "right": 416
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1410,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/404-mobile430.png"
+  },
+  {
+    "route": "404",
+    "viewport": "mobile",
+    "size": [
+      390,
+      844
+    ],
+    "checks": {
+      "no_horizontal_overflow": true,
+      "has_h1": true,
+      "one_h1": true,
+      "accessible_names": true,
+      "form_fields_labeled": true,
+      "image_alt_text": true,
+      "one_main_landmark": true,
+      "h1_not_absurd": true,
+      "images_loaded": true,
+      "no_console_errors": true,
+      "no_mobile_horizontal_carousel": true,
+      "mobile_menu_opens": true,
+      "mobile_menu_closes": true
+    },
+    "passed": true,
+    "metrics": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "offenders": [],
+      "h1": {
+        "text": "Essa página saiu do fluxo.",
+        "size": 48,
+        "rect": {
+          "top": 262.359375,
+          "bottom": 356.421875,
+          "left": 14,
+          "right": 376
+        }
+      },
+      "imgs": [],
+      "bodyHeight": 1349,
+      "h1Count": 1,
+      "missingNames": [],
+      "unlabeled": [],
+      "missingAlt": 0,
+      "mainCount": 1
+    },
+    "errors": [],
+    "screenshot": "qa/screens/404-mobile.png"
+  }
+]
