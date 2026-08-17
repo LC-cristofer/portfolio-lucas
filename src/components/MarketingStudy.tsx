@@ -23,9 +23,21 @@ export function MarketingStudy() {
 
         <article className="study-slide study-slide--carousel" role="listitem">
           <small>CARROSSEL / 02</small>
-          <strong>Participação não é detalhe.</strong>
-          <p>É parte da experiência — e precisa aparecer na comunicação.</p>
-          <div className="study-carousel__footer"><i /><i /><i /></div>
+          <div className="study-carousel-viewport" aria-label="Carrossel animado com três mensagens">
+            <div className="study-carousel-frame study-carousel-frame--one">
+              <strong>Participação não é detalhe.</strong>
+              <p>É parte da experiência — e precisa aparecer na comunicação.</p>
+            </div>
+            <div className="study-carousel-frame study-carousel-frame--two">
+              <strong>Acesso começa na comunicação.</strong>
+              <p>Informação clara reduz barreiras antes mesmo do primeiro contato.</p>
+            </div>
+            <div className="study-carousel-frame study-carousel-frame--three">
+              <strong>Incluir também é ouvir.</strong>
+              <p>Feedback muda decisões quando participação faz parte do processo.</p>
+            </div>
+          </div>
+          <div className="study-carousel__footer" aria-hidden="true"><i /><i /><i /></div>
         </article>
       </div>
       <p className="marketing-study__hint">No celular, deslize para ver as peças.</p>
