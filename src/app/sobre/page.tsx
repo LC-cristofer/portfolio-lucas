@@ -20,8 +20,8 @@ export default function AboutPage() {
             <h1>Eu trabalho na interseção entre comunicação, design e tecnologia.</h1>
             <p>Minha base em marketing me faz começar pela mensagem, pelo público e pelo objetivo. O desenvolvimento entra para transformar essa direção em experiências e produtos que funcionam no dia a dia.</p>
           </div>
-          <figure className="about-portrait">
-            <Image src="/images/lucas-about.webp" alt="Lucas Cristofer em ambiente externo" fill priority sizes="(max-width: 900px) 100vw, 42vw" />
+          <figure className="about-portrait about-portrait--studio">
+            <Image src="/images/lucas-hero.webp" alt="Retrato profissional de Lucas Cristofer" fill priority sizes="(max-width: 900px) 100vw, 42vw" />
           </figure>
         </div>
       </section>
