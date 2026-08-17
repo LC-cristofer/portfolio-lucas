@@ -43,7 +43,6 @@ const slides = [
 
 export function HomeHeroCarousel() {
   const [active, setActive] = useState(0);
-  const [paused, setPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
   const reduceMotion = useMemo(
     () => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
@@ -51,18 +50,17 @@ export function HomeHeroCarousel() {
   );
 
   useEffect(() => {
-    if (paused || reduceMotion) return;
-    const timer = window.setInterval(() => {
+    if (reduceMotion) return;
+    const timer = window.setTimeout(() => {
       setActive((current) => (current + 1) % slides.length);
-    }, 6200);
-    return () => window.clearInterval(timer);
-  }, [paused, reduceMotion]);
+    }, 5000);
+    return () => window.clearTimeout(timer);
+  }, [active, reduceMotion]);
 
   const goTo = (index: number) => setActive((index + slides.length) % slides.length);
 
   const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     touchStartX.current = event.touches[0]?.clientX ?? null;
-    setPaused(true);
   };
 
   const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
@@ -74,17 +72,11 @@ export function HomeHeroCarousel() {
     if (Math.abs(distance) > 48) {
       goTo(active + (distance < 0 ? 1 : -1));
     }
-
-    window.setTimeout(() => setPaused(false), 2600);
   };
 
   return (
     <div
       className="home-carousel home-carousel--hero"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocusCapture={() => setPaused(true)}
-      onBlurCapture={() => setPaused(false)}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
       aria-label="Destaques de tecnologia, marketing e projetos integrados"
