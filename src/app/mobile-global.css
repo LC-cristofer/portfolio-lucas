@@ -1,0 +1,102 @@
+/* Global mobile gutters.
+   Several responsive layout classes also carry `.shell` and had `width: 100%`,
+   which overrode the shared content container on small screens. This file is
+   loaded last so every page keeps a consistent safe area without changing
+   the approved desktop layout. */
+
+@media (max-width: 900px) {
+  :root {
+    --shell: min(calc(100% - 40px), 820px);
+  }
+
+  .shell {
+    width: var(--shell) !important;
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    min-width: 0;
+  }
+
+  .home-hero__grid,
+  .discipline-hero__grid,
+  .marketing-hero-grid,
+  .page-hero__grid,
+  .about-hero-grid,
+  .about-home-grid,
+  .about-video-grid,
+  .contact-grid,
+  .concept-index-grid,
+  .concept-study-grid,
+  .case-hero__grid,
+  .case-scope-grid,
+  .stack-layout,
+  .tech-method-grid,
+  .principles-grid,
+  .discipline-layout,
+  .footer-grid,
+  .footer-bottom,
+  .site-header__inner,
+  .mobile-menu__nav {
+    max-width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --shell: calc(100% - 32px);
+  }
+
+  .home-hero__grid,
+  .discipline-hero__grid,
+  .marketing-hero-grid,
+  .page-hero__grid,
+  .about-hero-grid,
+  .about-home-grid,
+  .about-video-grid,
+  .contact-grid,
+  .concept-index-grid,
+  .concept-study-grid,
+  .case-hero__grid,
+  .case-scope-grid,
+  .stack-layout,
+  .tech-method-grid,
+  .principles-grid,
+  .discipline-layout,
+  .footer-grid,
+  .footer-bottom,
+  .site-header__inner,
+  .mobile-menu__nav {
+    max-width: calc(100% - 32px);
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --shell: calc(100% - 28px);
+  }
+
+  .home-hero__grid,
+  .discipline-hero__grid,
+  .marketing-hero-grid,
+  .page-hero__grid,
+  .about-hero-grid,
+  .about-home-grid,
+  .about-video-grid,
+  .contact-grid,
+  .concept-index-grid,
+  .concept-study-grid,
+  .case-hero__grid,
+  .case-scope-grid,
+  .stack-layout,
+  .tech-method-grid,
+  .principles-grid,
+  .discipline-layout,
+  .footer-grid,
+  .footer-bottom,
+  .site-header__inner,
+  .mobile-menu__nav {
+    max-width: calc(100% - 28px);
+  }
+}
