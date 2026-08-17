@@ -12,25 +12,7 @@ export default function HomePage() {
   return (
     <>
       <section className="home-showcase">
-        <div className="shell home-showcase__grid">
-          <div className="home-showcase__copy">
-            <span className="eyebrow">Lucas Cristofer · Marketing & Tecnologia</span>
-            <h1>Comunicação que chama atenção. Tecnologia que sustenta o negócio.</h1>
-            <p className="home-showcase__lead">
-              Crio sites, sistemas e experiências digitais para negócios que precisam operar melhor, apresentar mais valor e transformar presença digital em uma estrutura mais profissional.
-            </p>
-            <div className="home-showcase__actions">
-              <Link className="button button--primary" href="/servicos">Conhecer serviços <ArrowIcon /></Link>
-              <Link className="button button--secondary" href="/projetos">Ver portfólio <ArrowIcon /></Link>
-              <a className="text-link text-link--hero" href={site.whatsapp} target="_blank" rel="noopener noreferrer">Falar no WhatsApp <ArrowIcon /></a>
-            </div>
-            <div className="home-showcase__signals" aria-label="Áreas de atuação">
-              <span>Sites & sistemas</span>
-              <span>Integrações & automações</span>
-              <span>Marketing & presença digital</span>
-            </div>
-          </div>
-
+        <div className="shell home-showcase__hero">
           <HomeHeroCarousel />
         </div>
       </section>
