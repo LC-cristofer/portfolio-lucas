@@ -21,7 +21,7 @@ export default function HomePage() {
         <div className="shell discipline-layout">
           <Reveal className="discipline-layout__intro">
             <span className="eyebrow">Serviços</span>
-            <h2>Tecnologia primeiro. Marketing quando o problema também passa pela comunicação.</h2>
+            <h2>Tecnologia primeiro. Marketing quando a comunicação também precisa mudar.</h2>
             <p>
               Você pode contratar uma frente específica ou combinar desenvolvimento, estratégia, conteúdo e design quando o projeto exige uma solução integrada.
             </p>
