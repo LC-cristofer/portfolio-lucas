@@ -169,6 +169,70 @@
     height: calc(100dvh - 64px);
     min-height: calc(100vh - 64px);
   }
+
+  /* Every mobile marketing carousel uses the same horizontal behavior.
+     AutoCarousel advances these tracks, while touch scrolling remains enabled. */
+  .marketing-hero-system,
+  .marketing-study__track {
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory !important;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+  }
+
+  .marketing-hero-system::-webkit-scrollbar,
+  .marketing-study__track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .marketing-hero-system {
+    gap: 12px;
+    padding: 0 16px 8px 0 !important;
+  }
+
+  .marketing-hero-system article {
+    flex: 0 0 min(84vw, 330px) !important;
+    width: auto !important;
+    min-height: 270px !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px !important;
+    border-radius: 22px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .marketing-hero-system article strong {
+    margin-top: auto;
+  }
+
+  .marketing-study__track {
+    gap: 10px;
+    padding: 0 4px 5px 0 !important;
+  }
+
+  .marketing-study .study-slide {
+    flex: 0 0 min(82vw, 310px) !important;
+    width: auto !important;
+    max-width: none !important;
+    aspect-ratio: 4 / 5 !important;
+    padding: 24px !important;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .marketing-study__hint {
+    display: block !important;
+    margin: 10px 4px 0;
+    color: #77726c;
+    font-size: .68rem;
+  }
 }
 
 @media (max-width: 680px) {
