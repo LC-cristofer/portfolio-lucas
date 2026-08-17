@@ -1,0 +1,156 @@
+/* Global typography scale.
+   Loaded last so page-level headings follow one visual system across desktop and mobile. */
+
+:root {
+  --type-page-title: clamp(3rem, 4.2vw, 4.1rem);
+  --type-hero-slide: clamp(2.9rem, 4vw, 4.05rem);
+  --type-section-title: clamp(2.25rem, 3.25vw, 3.15rem);
+  --type-card-title: clamp(1.3rem, 1.65vw, 1.7rem);
+  --type-lead: clamp(1rem, 1.15vw, 1.08rem);
+  --type-body: 1rem;
+
+  --leading-display: 1.01;
+  --leading-section: 1.06;
+  --leading-lead: 1.64;
+  --leading-body: 1.68;
+}
+
+/* Page-level titles: one consistent scale. */
+.page-hero h1,
+.services-hero h1,
+.discipline-hero__copy h1,
+.about-hero-copy h1,
+.contact-copy h1,
+.case-hero__copy h1 {
+  font-size: var(--type-page-title);
+  line-height: var(--leading-display);
+  letter-spacing: -.052em;
+  font-weight: 735;
+}
+
+/* Home carousel keeps its own hierarchy, but no longer jumps to an oversized scale. */
+.home-carousel--hero .home-carousel__content h1,
+.home-carousel--hero .home-carousel__content h2 {
+  font-size: var(--type-hero-slide);
+  line-height: var(--leading-display);
+  letter-spacing: -.05em;
+}
+
+/* Section titles follow the same rhythm across the site. */
+.section-heading h2,
+.discipline-layout__intro h2,
+.about-home-copy h2,
+.tech-method-grid h2,
+.concept-study-copy h2,
+.concept-index-copy h2,
+.services-block__head h2,
+.services-integrated h2,
+.principles-grid > div h2,
+.case-story h2,
+.case-scope-grid h2,
+.stack-layout h2,
+.next-case__inner h2,
+.closing-cta h2 {
+  font-size: var(--type-section-title);
+  line-height: var(--leading-section);
+  letter-spacing: -.045em;
+}
+
+/* Card and list titles should feel related instead of using a different scale per page. */
+.service-item h3,
+.service-detail-card h3,
+.project-card__content h3,
+.principle-list h3,
+.discipline-list h3,
+.process-grid h3,
+.tech-layers strong,
+.marketing-process-grid strong {
+  font-size: var(--type-card-title);
+  line-height: 1.12;
+  letter-spacing: -.03em;
+}
+
+/* Intro copy / page leads. */
+.page-hero p,
+.services-hero p,
+.discipline-hero__copy > p,
+.about-hero-copy p,
+.contact-copy > p,
+.case-hero__copy > p,
+.section-heading > p,
+.services-block__head > p,
+.services-integrated__side p,
+.concept-study-lead,
+.about-home-copy > p {
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
+}
+
+/* Supporting copy remains readable without competing with headings. */
+.service-item p,
+.service-detail-card p,
+.discipline-list p,
+.process-grid p,
+.principle-list p,
+.tech-layers p,
+.marketing-process-grid p,
+.case-story p,
+.concept-story p {
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --type-page-title: clamp(2.7rem, 7.5vw, 3.45rem);
+    --type-hero-slide: clamp(2.55rem, 7vw, 3.3rem);
+    --type-section-title: clamp(2.15rem, 5.6vw, 2.75rem);
+    --type-card-title: clamp(1.25rem, 3.2vw, 1.55rem);
+  }
+}
+
+@media (max-width: 680px) {
+  :root {
+    --type-page-title: clamp(2.3rem, 9.3vw, 2.95rem);
+    --type-hero-slide: clamp(2.15rem, 8.8vw, 2.75rem);
+    --type-section-title: clamp(1.95rem, 7.7vw, 2.45rem);
+    --type-card-title: clamp(1.2rem, 5.2vw, 1.45rem);
+    --type-lead: .98rem;
+    --type-body: .94rem;
+  }
+
+  .page-hero h1,
+  .services-hero h1,
+  .discipline-hero__copy h1,
+  .about-hero-copy h1,
+  .contact-copy h1,
+  .case-hero__copy h1,
+  .home-carousel--hero .home-carousel__content h1,
+  .home-carousel--hero .home-carousel__content h2,
+  .section-heading h2,
+  .discipline-layout__intro h2,
+  .about-home-copy h2,
+  .tech-method-grid h2,
+  .concept-study-copy h2,
+  .concept-index-copy h2,
+  .services-block__head h2,
+  .services-integrated h2,
+  .principles-grid > div h2,
+  .case-story h2,
+  .case-scope-grid h2,
+  .stack-layout h2,
+  .next-case__inner h2,
+  .closing-cta h2 {
+    letter-spacing: -.042em;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --type-page-title: clamp(2.15rem, 10.5vw, 2.7rem);
+    --type-hero-slide: clamp(2rem, 9.8vw, 2.5rem);
+    --type-section-title: clamp(1.85rem, 8.5vw, 2.25rem);
+    --type-lead: .95rem;
+    --type-body: .92rem;
+  }
+}
