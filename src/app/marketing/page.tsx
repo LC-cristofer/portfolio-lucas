@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowIcon } from '@/components/ArrowIcon';
+import { AutoCarousel } from '@/components/AutoCarousel';
 import { MarketingStudy } from '@/components/MarketingStudy';
 import { Reveal } from '@/components/Reveal';
 
@@ -30,11 +31,11 @@ export default function MarketingPage() {
             <Link className="button button--primary" href="/contato">Falar sobre marketing <ArrowIcon /></Link>
           </div>
 
-          <div className="marketing-hero-system" aria-label="Etapas de um projeto de marketing">
+          <AutoCarousel className="marketing-hero-system" aria-label="Etapas de um projeto de marketing" interval={3600}>
             <article><span>01</span><strong>Estratégia</strong><p>O que precisa ser comunicado, para quem e por quê.</p></article>
             <article><span>02</span><strong>Direção</strong><p>Mensagem, tom e linguagem visual que organizam a percepção.</p></article>
             <article><span>03</span><strong>Desdobramento</strong><p>Aplicação consistente em campanhas, social e materiais.</p></article>
-          </div>
+          </AutoCarousel>
         </div>
       </section>
 
