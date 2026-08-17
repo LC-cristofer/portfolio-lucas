@@ -1,3 +1,5 @@
+import { AutoCarousel } from '@/components/AutoCarousel';
+
 export function MarketingStudy() {
   return (
     <div className="marketing-study" aria-label="Estudo conceitual de campanha de inclusão">
@@ -5,7 +7,7 @@ export function MarketingStudy() {
         <span>PROJETO CONCEITUAL · CAMPANHA INSTITUCIONAL</span>
         <span>3 aplicações</span>
       </div>
-      <div className="marketing-study__track" role="list" aria-label="Aplicações da campanha">
+      <AutoCarousel className="marketing-study__track" role="list" aria-label="Aplicações da campanha" interval={4200}>
         <article className="study-slide study-slide--poster" role="listitem">
           <small>KEY VISUAL</small>
           <strong>Incluir começa por abrir espaço.</strong>
@@ -39,8 +41,8 @@ export function MarketingStudy() {
           </div>
           <div className="study-carousel__footer" aria-hidden="true"><i /><i /><i /></div>
         </article>
-      </div>
-      <p className="marketing-study__hint">No celular, deslize para ver as peças.</p>
+      </AutoCarousel>
+      <p className="marketing-study__hint">O carrossel avança sozinho. Você também pode deslizar.</p>
     </div>
   );
 }
