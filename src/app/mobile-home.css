@@ -1,0 +1,143 @@
+/* Mobile refinement for the home hero.
+   Kept isolated from desktop styles to avoid changing the approved desktop layout. */
+
+@media (max-width: 768px) {
+  .home-hero {
+    padding-top: 38px;
+    padding-bottom: 52px;
+  }
+
+  .home-hero__grid {
+    gap: 30px;
+  }
+
+  .home-hero__copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .home-hero__copy > .eyebrow {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.64rem;
+    line-height: 1.45;
+    letter-spacing: 0.105em;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .home-hero__copy h1 {
+    max-width: 620px;
+    margin: 14px 0 18px;
+    font-size: clamp(2.15rem, 9.4vw, 2.75rem);
+    line-height: 1.035;
+    letter-spacing: -0.045em;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .hero-lead {
+    max-width: 590px;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .hero-actions {
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .hero-services {
+    gap: 8px 18px;
+    margin-top: 28px;
+    padding-top: 18px;
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .hero-portrait-wrap {
+    width: 100%;
+    max-width: 560px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --shell: calc(100% - 32px);
+  }
+
+  .home-hero {
+    padding-top: 30px;
+    padding-bottom: 44px;
+  }
+
+  .home-hero__grid {
+    gap: 24px;
+  }
+
+  .home-hero__copy > .eyebrow {
+    font-size: 0.61rem;
+    line-height: 1.4;
+    letter-spacing: 0.09em;
+  }
+
+  .home-hero__copy h1 {
+    margin: 12px 0 17px;
+    font-size: clamp(2rem, 9.8vw, 2.42rem);
+    line-height: 1.045;
+    letter-spacing: -0.041em;
+  }
+
+  .hero-lead {
+    font-size: 0.98rem;
+    line-height: 1.52;
+  }
+
+  .hero-actions {
+    margin-top: 22px;
+    gap: 8px;
+  }
+
+  .hero-actions .button {
+    min-height: 48px;
+  }
+
+  .text-link--hero {
+    min-height: 40px;
+    font-size: 0.95rem;
+  }
+
+  .hero-services {
+    margin-top: 24px;
+    padding-top: 16px;
+    gap: 7px 16px;
+    font-size: 0.75rem;
+  }
+
+  .hero-services span:not(:last-child)::after {
+    right: -9px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --shell: calc(100% - 24px);
+  }
+
+  .home-hero__copy h1 {
+    font-size: 1.95rem;
+    line-height: 1.055;
+  }
+
+  .home-hero__copy > .eyebrow {
+    font-size: 0.58rem;
+    letter-spacing: 0.075em;
+  }
+
+  .hero-services {
+    font-size: 0.72rem;
+    gap: 7px 14px;
+  }
+}
