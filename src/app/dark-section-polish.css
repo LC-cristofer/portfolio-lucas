@@ -1,0 +1,34 @@
+/* Premium dark treatment for the bright-blue CTA/integrated sections. */
+.services-integrated,
+.closing-cta--blue {
+  background: linear-gradient(135deg, #0f1115 0%, #151922 100%);
+  color: #f5f5f2;
+}
+
+.services-integrated .eyebrow,
+.closing-cta--blue .eyebrow {
+  color: rgba(245, 245, 242, .62);
+}
+
+.services-integrated h2,
+.closing-cta--blue h2 {
+  color: #f5f5f2;
+}
+
+.services-integrated__side p,
+.closing-cta--blue p {
+  color: rgba(245, 245, 242, .74);
+}
+
+.services-integrated .button--light,
+.closing-cta--blue .button--light {
+  background: #f5f5f2;
+  color: #111318;
+  border-color: #f5f5f2;
+}
+
+.services-integrated .button--light:hover,
+.closing-cta--blue .button--light:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+}
