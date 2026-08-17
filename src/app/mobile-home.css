@@ -1,7 +1,25 @@
-/* Mobile refinement for the home hero.
+/* Mobile refinement for the home page.
    Kept isolated from desktop styles to avoid changing the approved desktop layout. */
 
+/*
+  Important: several responsive grid elements also carry the .shell class.
+  globals.css changes those grids to width: 100% below 900px, which cancels
+  the shell gutter and makes text touch the viewport edges. Restore the shell
+  width here so the mobile layout keeps a real horizontal safe area.
+*/
+@media (max-width: 900px) {
+  .home-hero__grid,
+  .about-home-grid {
+    width: var(--shell);
+    margin-inline: auto;
+  }
+}
+
 @media (max-width: 768px) {
+  :root {
+    --shell: calc(100% - 40px);
+  }
+
   .home-hero {
     padding-top: 38px;
     padding-bottom: 52px;
@@ -65,7 +83,7 @@
 
 @media (max-width: 480px) {
   :root {
-    --shell: calc(100% - 32px);
+    --shell: calc(100% - 40px);
   }
 
   .home-hero {
@@ -123,7 +141,7 @@
 
 @media (max-width: 360px) {
   :root {
-    --shell: calc(100% - 24px);
+    --shell: calc(100% - 28px);
   }
 
   .home-hero__copy h1 {
