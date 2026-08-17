@@ -2,45 +2,49 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { ArrowIcon } from '@/components/ArrowIcon';
 
 const slides = [
   {
     eyebrow: 'Tecnologia',
-    title: 'Produtos digitais que organizam a operação.',
-    text: 'Sites, sistemas, dashboards e integrações pensados para reduzir fricção e sustentar crescimento.',
+    title: 'Tecnologia que sustenta o negócio.',
+    text: 'Sites, sistemas, dashboards, integrações e automações para organizar operação, reduzir fricção e construir uma base digital mais profissional.',
     href: '/tecnologia',
     cta: 'Explorar tecnologia',
+    secondaryHref: '/projetos',
+    secondaryCta: 'Ver portfólio',
     image: 'https://images.unsplash.com/photo-1778146476147-5f8d4bd03c79?auto=format&fit=crop&fm=jpg&q=82&w=2200',
     alt: 'Workspace de desenvolvimento com notebook e código na tela',
-    // Fonte: https://unsplash.com/photos/laptop-and-phone-on-a-desk-with-coding-software-open-oYzjGQ7LCVE
   },
   {
     eyebrow: 'Marketing',
     title: 'Comunicação que deixa o valor mais fácil de perceber.',
-    text: 'Posicionamento, campanha, conteúdo e presença digital com mensagem clara e direção visual consistente.',
+    text: 'Posicionamento, campanha, conteúdo e presença digital com mensagem clara e direção visual consistente — sem depender de comunicação genérica.',
     href: '/marketing',
     cta: 'Explorar marketing',
+    secondaryHref: '/projetos',
+    secondaryCta: 'Ver portfólio',
     image: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?auto=format&fit=crop&fm=jpg&q=82&w=2200',
     alt: 'Estação de trabalho de marketing digital com notebook em ambiente organizado',
-    // Fonte: https://unsplash.com/photos/a-laptop-computer-sitting-on-top-of-a-desk-Q4iYWsWbR90
   },
   {
     eyebrow: 'Projeto integrado',
     title: 'Estratégia e execução trabalhando na mesma direção.',
-    text: 'Quando o problema pede comunicação e tecnologia, a solução nasce integrada — sem remendos entre etapas.',
+    text: 'Quando o problema pede comunicação e tecnologia, mensagem, experiência e desenvolvimento são pensados juntos para evitar remendos entre etapas.',
     href: '/servicos',
     cta: 'Conhecer os serviços',
+    secondaryHref: '/contato',
+    secondaryCta: 'Falar sobre um projeto',
     image: 'https://images.unsplash.com/photo-1759661990336-51bd4b951fea?auto=format&fit=crop&fm=jpg&q=82&w=2200',
     alt: 'Ambiente de desenvolvimento com múltiplas telas, código e planejamento de interface',
-    // Fonte: https://unsplash.com/photos/computer-screens-displaying-code-with-neon-lighting-WD7S-Lz12Es
   },
 ];
 
 export function HomeHeroCarousel() {
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
+  const touchStartX = useRef<number | null>(null);
   const reduceMotion = useMemo(
     () => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     [],
@@ -56,13 +60,33 @@ export function HomeHeroCarousel() {
 
   const goTo = (index: number) => setActive((index + slides.length) % slides.length);
 
+  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = event.touches[0]?.clientX ?? null;
+    setPaused(true);
+  };
+
+  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null) return;
+    const endX = event.changedTouches[0]?.clientX ?? touchStartX.current;
+    const distance = endX - touchStartX.current;
+    touchStartX.current = null;
+
+    if (Math.abs(distance) > 48) {
+      goTo(active + (distance < 0 ? 1 : -1));
+    }
+
+    window.setTimeout(() => setPaused(false), 2600);
+  };
+
   return (
     <div
-      className="home-carousel"
+      className="home-carousel home-carousel--hero"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocusCapture={() => setPaused(true)}
       onBlurCapture={() => setPaused(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
       aria-label="Destaques de tecnologia, marketing e projetos integrados"
     >
       <div className="home-carousel__viewport">
@@ -77,16 +101,21 @@ export function HomeHeroCarousel() {
               alt={slide.alt}
               fill
               priority={index === 0}
-              sizes="(max-width: 900px) calc(100vw - 40px), 58vw"
+              sizes="(max-width: 900px) calc(100vw - 40px), 1280px"
             />
             <div className="home-carousel__shade" aria-hidden="true" />
             <div className="home-carousel__content">
               <span>{slide.eyebrow}</span>
-              <h2>{slide.title}</h2>
+              {index === 0 ? <h1>{slide.title}</h1> : <h2>{slide.title}</h2>}
               <p>{slide.text}</p>
-              <Link href={slide.href} tabIndex={index === active ? 0 : -1}>
-                {slide.cta} <ArrowIcon />
-              </Link>
+              <div className="home-carousel__actions">
+                <Link className="home-carousel__primary" href={slide.href} tabIndex={index === active ? 0 : -1}>
+                  {slide.cta} <ArrowIcon />
+                </Link>
+                <Link className="home-carousel__secondary" href={slide.secondaryHref} tabIndex={index === active ? 0 : -1}>
+                  {slide.secondaryCta} <ArrowIcon />
+                </Link>
+              </div>
             </div>
           </article>
         ))}
