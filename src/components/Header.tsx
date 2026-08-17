@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 const nav = [
   { href: '/', label: 'Home' },
   { href: '/projetos', label: 'Portfólio' },
+  { href: '/servicos', label: 'Serviços' },
   { href: '/tecnologia', label: 'Tecnologia' },
   { href: '/marketing', label: 'Marketing' },
   { href: '/sobre', label: 'Sobre' },
