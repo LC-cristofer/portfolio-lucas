@@ -1,6 +1,6 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowIcon } from '@/components/ArrowIcon';
+import { HomeHeroCarousel } from '@/components/HomeHeroCarousel';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Reveal } from '@/components/Reveal';
 import { SocialLinks } from '@/components/SocialLinks';
@@ -11,40 +11,90 @@ import { site } from '@/lib/site';
 export default function HomePage() {
   return (
     <>
-      <section className="home-hero">
-        <div className="shell home-hero__grid">
-          <div className="home-hero__copy">
+      <section className="home-showcase">
+        <div className="shell home-showcase__grid">
+          <div className="home-showcase__copy">
             <span className="eyebrow">Lucas Cristofer · Marketing & Tecnologia</span>
             <h1>Comunicação que chama atenção. Tecnologia que sustenta o negócio.</h1>
-            <p className="hero-lead">
-              Crio sites, produtos digitais e campanhas para profissionais e empresas que precisam se apresentar melhor, vender melhor e simplificar processos.
+            <p className="home-showcase__lead">
+              Crio sites, sistemas e experiências digitais para negócios que precisam operar melhor, apresentar mais valor e transformar presença digital em uma estrutura mais profissional.
             </p>
-            <div className="hero-actions">
-              <Link className="button button--primary" href="/projetos">Ver portfólio <ArrowIcon /></Link>
+            <div className="home-showcase__actions">
+              <Link className="button button--primary" href="/servicos">Conhecer serviços <ArrowIcon /></Link>
+              <Link className="button button--secondary" href="/projetos">Ver portfólio <ArrowIcon /></Link>
               <a className="text-link text-link--hero" href={site.whatsapp} target="_blank" rel="noopener noreferrer">Falar no WhatsApp <ArrowIcon /></a>
             </div>
-            <div className="hero-services" aria-label="Áreas de atuação">
-              <span>Sites & landing pages</span>
-              <span>Produtos digitais</span>
-              <span>Campanhas</span>
-              <span>Identidade & conteúdo</span>
+            <div className="home-showcase__signals" aria-label="Áreas de atuação">
+              <span>Sites & sistemas</span>
+              <span>Integrações & automações</span>
+              <span>Marketing & presença digital</span>
             </div>
           </div>
 
-          <div className="hero-portrait-wrap">
-            <figure className="hero-portrait">
-              <Image
-                src="/images/lucas-hero.webp"
-                alt="Lucas Cristofer"
-                fill
-                priority
-                sizes="(max-width: 900px) 100vw, 46vw"
-              />
-              <figcaption className="hero-portrait__caption">
-                <span>Marketing · Design · Desenvolvimento</span>
-                <strong>Estratégia e execução no mesmo projeto.</strong>
-              </figcaption>
-            </figure>
+          <HomeHeroCarousel />
+        </div>
+      </section>
+
+      <section className="section section--disciplines">
+        <div className="shell discipline-layout">
+          <Reveal className="discipline-layout__intro">
+            <span className="eyebrow">Serviços</span>
+            <h2>Tecnologia primeiro. Marketing quando o problema também passa pela comunicação.</h2>
+            <p>
+              Você pode contratar uma frente específica ou combinar desenvolvimento, estratégia, conteúdo e design quando o projeto exige uma solução integrada.
+            </p>
+            <div className="home-services-action">
+              <Link className="button button--secondary" href="/servicos">Ver todos os serviços <ArrowIcon /></Link>
+            </div>
+          </Reveal>
+          <div className="discipline-list">
+            <Reveal>
+              <article>
+                <span>01</span>
+                <div><h3>Tecnologia</h3><p>Sites, landing pages, sistemas, dashboards, integrações, automações e manutenção.</p></div>
+                <Link aria-label="Explorar serviços de tecnologia" href="/tecnologia"><ArrowIcon /></Link>
+              </article>
+            </Reveal>
+            <Reveal delay={70}>
+              <article>
+                <span>02</span>
+                <div><h3>Marketing</h3><p>Campanhas, social media, identidade, materiais e organização da presença digital.</p></div>
+                <Link aria-label="Explorar serviços de marketing" href="/marketing"><ArrowIcon /></Link>
+              </article>
+            </Reveal>
+            <Reveal delay={140}>
+              <article>
+                <span>03</span>
+                <div><h3>Projeto integrado</h3><p>Uma direção única para mensagem, experiência e produto digital quando as duas frentes precisam trabalhar juntas.</p></div>
+                <Link aria-label="Explorar serviços integrados" href="/servicos"><ArrowIcon /></Link>
+              </article>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section--selected-work">
+        <div className="shell">
+          <Reveal>
+            <div className="section-heading section-heading--split">
+              <div>
+                <span className="eyebrow">Portfólio em destaque</span>
+                <h2>Projetos reais para mostrar como eu penso e construo.</h2>
+              </div>
+              <p>
+                Produtos digitais desenvolvidos com foco em operação, clareza de interface e evolução técnica — com contexto suficiente para entender o que existe por trás da tela.
+              </p>
+            </div>
+          </Reveal>
+          <div className="project-stack">
+            {projects.map((project, index) => (
+              <Reveal key={project.slug} delay={index * 70}>
+                <ProjectCard project={project} featured />
+              </Reveal>
+            ))}
+          </div>
+          <div className="section-footer-action">
+            <Link className="button button--secondary" href="/projetos">Ver portfólio completo <ArrowIcon /></Link>
           </div>
         </div>
       </section>
@@ -72,71 +122,10 @@ export default function HomePage() {
               <span>Estratégia</span><span>Direção visual</span><span>Desenvolvimento</span>
             </div>
             <div className="about-home-actions">
-              <Link className="button button--light" href="/sobre">Conhecer meu trabalho <ArrowIcon /></Link>
+              <Link className="button button--light" href="/sobre">Conhecer minha trajetória <ArrowIcon /></Link>
               <SocialLinks compact light />
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      <section className="section section--selected-work">
-        <div className="shell">
-          <Reveal>
-            <div className="section-heading section-heading--split">
-              <div>
-                <span className="eyebrow">Portfólio em destaque</span>
-                <h2>Projetos reais para mostrar como eu penso e construo.</h2>
-              </div>
-              <p>
-                Aqui você encontra produtos digitais desenvolvidos com foco em operação, clareza de interface e evolução técnica — com contexto suficiente para entender o que existe por trás da tela.
-              </p>
-            </div>
-          </Reveal>
-          <div className="project-stack">
-            {projects.map((project, index) => (
-              <Reveal key={project.slug} delay={index * 70}>
-                <ProjectCard project={project} featured />
-              </Reveal>
-            ))}
-          </div>
-          <div className="section-footer-action">
-            <Link className="button button--secondary" href="/projetos">Ver portfólio completo <ArrowIcon /></Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="section section--disciplines">
-        <div className="shell discipline-layout">
-          <Reveal className="discipline-layout__intro">
-            <span className="eyebrow">Serviços</span>
-            <h2>Você pode contratar uma frente ou combinar as duas.</h2>
-            <p>
-              Tecnologia e marketing têm escopos próprios. Quando o projeto exige os dois, estratégia, conteúdo, design e desenvolvimento são pensados juntos desde o começo.
-            </p>
-          </Reveal>
-          <div className="discipline-list">
-            <Reveal>
-              <article>
-                <span>01</span>
-                <div><h3>Tecnologia</h3><p>Sites, landing pages, sistemas, dashboards, integrações e manutenção.</p></div>
-                <Link aria-label="Explorar serviços de tecnologia" href="/tecnologia"><ArrowIcon /></Link>
-              </article>
-            </Reveal>
-            <Reveal delay={70}>
-              <article>
-                <span>02</span>
-                <div><h3>Marketing</h3><p>Campanhas, social media, identidade, materiais e presença digital.</p></div>
-                <Link aria-label="Explorar serviços de marketing" href="/marketing"><ArrowIcon /></Link>
-              </article>
-            </Reveal>
-            <Reveal delay={140}>
-              <article>
-                <span>03</span>
-                <div><h3>Projeto integrado</h3><p>Uma única direção para marca, comunicação e produto digital.</p></div>
-                <Link aria-label="Falar sobre projeto integrado" href="/contato"><ArrowIcon /></Link>
-              </article>
-            </Reveal>
-          </div>
         </div>
       </section>
 
