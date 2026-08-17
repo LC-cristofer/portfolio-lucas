@@ -13,6 +13,7 @@ export function Footer() {
         <nav className="footer-nav" aria-label="Navegação do rodapé">
           <Link href="/">Home</Link>
           <Link href="/projetos">Portfólio</Link>
+          <Link href="/servicos">Serviços</Link>
           <Link href="/tecnologia">Tecnologia</Link>
           <Link href="/marketing">Marketing</Link>
           <Link href="/sobre">Sobre</Link>
