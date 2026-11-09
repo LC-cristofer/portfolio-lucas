@@ -1,46 +1,53 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowIcon } from '@/components/ArrowIcon';
+import { Reveal } from '@/components/Reveal';
+import { SplitText } from '@/components/SplitText';
 
 export const metadata: Metadata = {
   title: 'Sobre',
-  description: 'Conheça a forma de trabalho de Lucas Cristofer na interseção entre estratégia, design, marketing e desenvolvimento.',
+  description: 'Lucas Cristofer é desenvolvedor full stack em Curitiba e traz a experiência em marketing para a forma como projeta interfaces e sistemas.',
 };
+
+const principles = [
+  ['Clareza faz parte do design.', 'Se a pessoa não entende o que fazer, a interface ainda não terminou.'],
+  ['Movimento e cor precisam ter função.', 'Existem para conduzir a atenção, não para provar habilidade.'],
+  ['Negócio e usuário não são lados opostos.', 'Um bom produto resolve o problema de quem usa e melhora o resultado de quem oferece.'],
+  ['Entregar inclui revisar.', 'Responsividade, conteúdo, estados vazios, acessibilidade e fluxo fazem parte do produto.'],
+];
 
 export default function AboutPage() {
   return (
     <>
-      <section className="about-hero">
-        <div className="shell about-hero-grid">
-          <div className="about-hero-copy">
-            <span className="eyebrow">Quem sou eu</span>
-            <h1>Eu trabalho na interseção entre comunicação, design e tecnologia.</h1>
-            <p>Minha base em marketing me faz começar pela mensagem, pelo público e pelo objetivo. O desenvolvimento entra para transformar essa direção em experiências e produtos que funcionam no dia a dia.</p>
+      <section className="about-intro">
+        <div className="shell about-intro__grid">
+          <div className="about-intro__copy">
+            <h1><SplitText text="Desenvolvedor full stack, com experiência em comunicação." /></h1>
+            <p>
+              Minha base em marketing me faz começar pelo público, pela mensagem e pelo objetivo. O desenvolvimento entra para transformar essa direção em sites, painéis e sistemas que funcionam no dia a dia.
+            </p>
+            <p>
+              Hoje trabalho principalmente com Next.js, React, TypeScript, Node.js e PostgreSQL, em Curitiba e remotamente.
+            </p>
+            <Link className="text-link" href="/projetos">Ver o que já construí</Link>
           </div>
-          <figure className="about-portrait about-portrait--studio">
-            <Image src="/images/lucas-hero.webp" alt="Retrato profissional de Lucas Cristofer" fill priority sizes="(max-width: 900px) 100vw, 42vw" />
-          </figure>
+          <Reveal variant="wipe" className="about-intro__photo">
+            <Image src="/images/lucas-hero.webp" alt="Retrato de Lucas Cristofer" width={1200} height={1500} priority sizes="(max-width: 900px) 80vw, 420px" />
+          </Reveal>
         </div>
       </section>
 
-      <section className="section section--principles">
-        <div className="shell principles-grid">
-          <div><span className="eyebrow eyebrow--light">Princípios</span><h2>O que guia meu trabalho.</h2></div>
-          <div className="principle-list">
-            <article><span>01</span><h3>Clareza é parte do design.</h3><p>Se a pessoa não entende o que fazer, a interface ainda não terminou.</p></article>
-            <article><span>02</span><h3>Estética precisa ter função.</h3><p>Movimento, cor e composição existem para conduzir atenção, não para provar habilidade.</p></article>
-            <article><span>03</span><h3>Negócio e usuário não são lados opostos.</h3><p>Um bom produto resolve o problema da pessoa e melhora o resultado de quem oferece.</p></article>
-            <article><span>04</span><h3>Entrega inclui revisão.</h3><p>Responsividade, conteúdo, estados, acessibilidade e fluxo fazem parte do produto.</p></article>
+      <section className="section">
+        <div className="shell">
+          <Reveal className="section-head"><h2>O que guia meu trabalho</h2></Reveal>
+          <div className="principles">
+            {principles.map(([title, text], index) => (
+              <Reveal as="article" variant="rule" delay={(index % 2) * 70} className="principle" key={title}>
+                <h3>{title}</h3>
+                <p>{text}</p>
+              </Reveal>
+            ))}
           </div>
-        </div>
-      </section>
-
-      <section className="closing-cta closing-cta--blue">
-        <div className="shell closing-cta__inner">
-          <span className="eyebrow eyebrow--light">Vamos trabalhar juntos?</span>
-          <h2>Se o problema é importante, a execução também precisa ser.</h2>
-          <Link className="button button--light" href="/contato">Falar sobre um projeto <ArrowIcon /></Link>
         </div>
       </section>
     </>

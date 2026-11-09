@@ -1,3 +1,4 @@
+import '@/app/marketing/marketing.css';
 import { AutoCarousel } from '@/components/AutoCarousel';
 
 export function MarketingStudy() {

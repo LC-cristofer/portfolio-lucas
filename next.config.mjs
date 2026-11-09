@@ -1,3 +1,6 @@
+import { readFileSync } from 'node:fs';
+
+const features = JSON.parse(readFileSync(new URL('./src/lib/features.json', import.meta.url), 'utf8'));
 const isDev = process.env.NODE_ENV !== 'production';
 
 const contentSecurityPolicy = [
@@ -33,17 +36,14 @@ const nextConfig = {
   poweredByHeader: false,
   images: {
     formats: ['image/avif', 'image/webp'],
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
-        pathname: '/photo-*',
-      },
-    ],
   },
   async redirects() {
-    // A página Serviços foi incorporada às páginas Tecnologia e Marketing.
-    return [{ source: '/servicos', destination: '/tecnologia', permanent: true }];
+    return [
+      // A página Serviços foi incorporada à página Tecnologia.
+      { source: '/servicos', destination: '/tecnologia', permanent: true },
+      // Marketing está desativado: ligue em src/lib/features.json para voltar.
+      ...(features.marketing ? [] : [{ source: '/marketing', destination: '/tecnologia', permanent: false }]),
+    ];
   },
   async headers() {
     return [

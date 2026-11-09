@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import './marketing.css';
 import { ArrowIcon } from '@/components/ArrowIcon';
 import { AutoCarousel } from '@/components/AutoCarousel';
 import { MarketingStudy } from '@/components/MarketingStudy';

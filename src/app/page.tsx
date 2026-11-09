@@ -1,75 +1,58 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowIcon } from '@/components/ArrowIcon';
-import { HomeHeroCarousel } from '@/components/HomeHeroCarousel';
 import { ProjectCard } from '@/components/ProjectCard';
+import { ProjectVisual } from '@/components/ProjectVisual';
 import { Reveal } from '@/components/Reveal';
-import { SocialLinks } from '@/components/SocialLinks';
+import { SplitText } from '@/components/SplitText';
 import { projects } from '@/lib/projects';
 import { site } from '@/lib/site';
 
 export default function HomePage() {
   return (
     <>
-      <section className="home-showcase">
-        <div className="shell home-showcase__hero">
-          <HomeHeroCarousel />
+      <section className="hero">
+        <div className="shell hero__grid">
+          <div className="hero__copy">
+            <h1><SplitText text={site.tagline} /></h1>
+            <p className="hero__lead">
+              Sou Lucas Cristofer, desenvolvedor full stack em Curitiba. Construo painéis, sistemas de gestão e sites com Next.js, TypeScript, Node.js e PostgreSQL.
+            </p>
+            <div className="hero__actions">
+              <Link className="button button--primary" href="/projetos">Ver projetos</Link>
+              <a className="text-link" href={site.whatsapp} target="_blank" rel="noopener noreferrer">Falar no WhatsApp</a>
+            </div>
+          </div>
+          <Reveal variant="window" delay={500} className="hero__visual">
+            <ProjectVisual project={projects[0]} />
+          </Reveal>
         </div>
       </section>
 
-      <section className="section section--selected-work">
+      <section className="section home-projects">
         <div className="shell">
-          <Reveal>
-            <div className="section-heading section-heading--split">
-              <div>
-                <span className="eyebrow">Portfólio em destaque</span>
-                <h2>Projetos reais para mostrar como eu penso e construo.</h2>
-              </div>
-              <p>
-                Produtos digitais com foco em operação, clareza de interface e evolução técnica — com contexto suficiente para entender o que existe por trás da tela.
-              </p>
-            </div>
+          <Reveal className="section-head">
+            <h2>Projetos</h2>
+            <p>Dois produtos completos, do banco de dados à interface. Cada um tem um estudo de caso com as decisões técnicas.</p>
           </Reveal>
-          <div className="project-stack">
+          <div className="project-list">
             {projects.map((project, index) => (
-              <Reveal key={project.slug} delay={index * 70}>
-                <ProjectCard project={project} featured />
-              </Reveal>
+              <ProjectCard key={project.slug} project={project} reverse={index % 2 === 1} />
             ))}
           </div>
-          <div className="section-footer-action">
-            <Link className="button button--secondary" href="/projetos">Ver portfólio completo <ArrowIcon /></Link>
-          </div>
         </div>
       </section>
 
-      <section className="section section--about-home" id="quem-sou-eu">
-        <div className="shell about-home-grid about-home-grid--text-only">
-          <Reveal className="about-home-copy">
-            <span className="eyebrow eyebrow--light">Quem sou eu</span>
-            <h2>Eu conecto comunicação e tecnologia para resolver problemas de negócio.</h2>
-            <p>
-              Minha experiência em marketing me ensinou a pensar em mensagem, público e percepção. O desenvolvimento me deu a ferramenta para transformar essa estratégia em sites, sistemas e experiências digitais que funcionam de verdade.
-            </p>
-            <div className="about-pillars">
-              <span>Estratégia</span><span>Direção visual</span><span>Desenvolvimento</span>
-            </div>
-            <div className="about-home-actions">
-              <Link className="button button--light" href="/sobre">Conhecer minha trajetória <ArrowIcon /></Link>
-              <SocialLinks compact light />
-            </div>
+      <section className="section about-home">
+        <div className="shell about-home__grid">
+          <Reveal variant="wipe" className="about-home__photo">
+            <Image src="/images/lucas-about.webp" alt="Retrato de Lucas Cristofer" width={1000} height={1250} sizes="(max-width: 900px) 70vw, 360px" />
           </Reveal>
-        </div>
-      </section>
-
-      <section className="closing-cta closing-cta--blue">
-        <div className="shell closing-cta__inner">
-          <Reveal>
-            <span className="eyebrow eyebrow--light">Vamos conversar?</span>
-            <h2>Me conte o que você precisa colocar de pé.</h2>
-            <div className="closing-actions">
-              <a className="button button--light" href={site.whatsapp} target="_blank" rel="noopener noreferrer">Falar no WhatsApp <ArrowIcon /></a>
-              <Link className="text-link text-link--light" href="/contato">Prefiro escrever por e-mail <ArrowIcon /></Link>
-            </div>
+          <Reveal delay={100} className="about-home__text">
+            <h2>Código com olhar de comunicação.</h2>
+            <p>
+              Minha experiência em marketing me ensinou a pensar em público, mensagem e clareza. No desenvolvimento, isso vira interfaces que explicam o que fazer e sistemas que a equipe consegue usar.
+            </p>
+            <Link className="text-link" href="/sobre">Conhecer minha trajetória</Link>
           </Reveal>
         </div>
       </section>

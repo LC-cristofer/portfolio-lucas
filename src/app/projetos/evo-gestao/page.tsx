@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowIcon } from '@/components/ArrowIcon';
-import { ProjectVisual } from '@/components/ProjectVisual';
+import { CaseIntro } from '@/components/CaseIntro';
+import { CaseStory } from '@/components/CaseStory';
 import { Reveal } from '@/components/Reveal';
 import { TechnicalCase } from '@/components/TechnicalCase';
 import { getProject } from '@/lib/projects';
@@ -16,48 +16,13 @@ export const metadata: Metadata = {
 export default function EvoPage() {
   return (
     <>
-      <section className="case-hero case-hero--evo">
-        <div className="shell case-hero__grid">
-          <div className="case-hero__copy">
-            <span className="eyebrow">Projeto real · {project.year}</span>
-            <h1>{project.title}</h1>
-            <p>{project.summary}</p>
-            <div className="case-tags">{project.capabilities.slice(0, 4).map((item) => <span key={item}>{item}</span>)}</div>
-            <a className="button button--primary" href={project.repoUrl} target="_blank" rel="noopener noreferrer">Ver repositório no GitHub <ArrowIcon /></a>
-            <div className="case-privacy-note"><strong>Privacidade:</strong> o repositório público usa somente dados demonstrativos fictícios. Dados pessoais reais não fazem parte da versão publicada.</div>
-          </div>
-          <div className="case-hero__visual"><ProjectVisual project={project} /></div>
-        </div>
-      </section>
+      <CaseIntro project={project} note="O repositório público usa somente dados fictícios de demonstração. Dados pessoais reais não fazem parte da versão publicada." />
 
-      <section className="section case-story">
-        <div className="shell case-story__grid">
-          <Reveal><div><span className="eyebrow">O problema</span><h2>Processos espalhados viram fricção.</h2><p>{project.challenge}</p></div></Reveal>
-          <Reveal delay={60}><div><span className="eyebrow">A direção</span><h2>Organizar pela jornada, não pela planilha.</h2><p>{project.approach}</p></div></Reveal>
-          <Reveal delay={120}><div><span className="eyebrow">O resultado técnico</span><h2>Uma base pronta para crescer.</h2><p>{project.outcome}</p></div></Reveal>
-        </div>
-      </section>
-
-      <section className="section section--case-scope">
-        <div className="shell case-scope-grid">
-          <Reveal>
-            <div>
-              <span className="eyebrow">Escopo construído</span>
-              <h2>Produto, não só interface.</h2>
-            </div>
-          </Reveal>
-          <ul className="scope-list">
-            {project.capabilities.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, '0')}</span>{item}</li>)}
-          </ul>
-        </div>
-      </section>
-
-      <section className="section section--stack">
-        <div className="shell stack-layout">
-          <div><span className="eyebrow">Stack</span><h2>Tecnologia a serviço da operação.</h2></div>
-          <div className="stack-chips">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
-        </div>
-      </section>
+      <CaseStory
+        project={project}
+        headings={['Processos espalhados viram fricção.', 'Organizar pela jornada, não pela planilha.', 'Uma base pronta para crescer.']}
+        scopeHeading="Produto, não só interface."
+      />
 
       <TechnicalCase
         intro="O EVO foi pensado como um sistema de gestão com domínio relacional, permissões diferentes por papel e vários módulos operacionais. A arquitetura prioriza clareza de responsabilidades, manutenção por uma equipe pequena e espaço para crescer sem começar com complexidade distribuída desnecessária."
@@ -113,10 +78,11 @@ export default function EvoPage() {
       />
 
       <section className="next-case">
-        <div className="shell next-case__inner">
-          <span className="eyebrow eyebrow--light">Próximo projeto</span>
-          <h2>POUPEME</h2>
-          <Link className="button button--light" href="/projetos/poupeme">Ver case <ArrowIcon /></Link>
+        <div className="shell">
+          <Reveal variant="rule" className="next-case__inner">
+            <p>Próximo projeto</p>
+            <Link href="/projetos/poupeme">POUPEME</Link>
+          </Reveal>
         </div>
       </section>
     </>

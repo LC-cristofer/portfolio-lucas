@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ArrowIcon } from '@/components/ArrowIcon';
-import { ProjectVisual } from '@/components/ProjectVisual';
+import { CaseIntro } from '@/components/CaseIntro';
+import { CaseStory } from '@/components/CaseStory';
 import { Reveal } from '@/components/Reveal';
 import { TechnicalCase } from '@/components/TechnicalCase';
 import { getProject } from '@/lib/projects';
@@ -16,43 +16,15 @@ export const metadata: Metadata = {
 export default function PoupemePage() {
   return (
     <>
-      <section className="case-hero case-hero--poupeme">
-        <div className="shell case-hero__grid">
-          <div className="case-hero__copy case-hero__copy--dark">
-            <span className="eyebrow eyebrow--light">Projeto real · Repositório privado · {project.year}</span>
-            <h1>{project.title}</h1>
-            <p>{project.summary}</p>
-            <div className="case-tags case-tags--dark">{project.capabilities.slice(0, 4).map((item) => <span key={item}>{item}</span>)}</div>
-            <span className="private-note">Código em repositório privado — sem link público.</span>
-          </div>
-          <div className="case-hero__visual"><ProjectVisual project={project} /></div>
-        </div>
-      </section>
+      <CaseIntro project={project} />
 
-      <section className="section case-story">
-        <div className="shell case-story__grid">
-          <Reveal><div><span className="eyebrow">O problema</span><h2>Finanças precisam ser lidas, não decifradas.</h2><p>{project.challenge}</p></div></Reveal>
-          <Reveal delay={60}><div><span className="eyebrow">A direção</span><h2>Resumo primeiro. Detalhe sob demanda.</h2><p>{project.approach}</p></div></Reveal>
-          <Reveal delay={120}><div><span className="eyebrow">O resultado técnico</span><h2>Fluxos, dados e infraestrutura conectados.</h2><p>{project.outcome}</p></div></Reveal>
-        </div>
-      </section>
-
-      <section className="section section--case-scope">
-        <div className="shell case-scope-grid">
-          <div><span className="eyebrow">Escopo construído</span><h2>Visão financeira sem virar planilha.</h2></div>
-          <ul className="scope-list">{project.capabilities.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, '0')}</span>{item}</li>)}</ul>
-        </div>
-      </section>
-
-      <section className="section section--stack section--stack-dark">
-        <div className="shell stack-layout">
-          <div><span className="eyebrow eyebrow--light">Stack</span><h2>Frontend, backend, dados e infraestrutura.</h2></div>
-          <div className="stack-chips stack-chips--dark">{project.stack.map((item) => <span key={item}>{item}</span>)}</div>
-        </div>
-      </section>
+      <CaseStory
+        project={project}
+        headings={['Finanças precisam ser lidas, não decifradas.', 'Resumo primeiro. Detalhe sob demanda.', 'Fluxos, dados e infraestrutura conectados.']}
+        scopeHeading="Visão financeira sem virar planilha."
+      />
 
       <TechnicalCase
-        dark
         intro="O POUPEME separa a experiência em Next.js de uma API Express e usa PostgreSQL como fonte principal de dados. A leitura técnica aqui não é apenas sobre a stack: é sobre consistência financeira, autenticação, cache, evolução do domínio e o que precisaria endurecer antes de um cenário de produção com dinheiro real."
         facts={[
           { label: 'Arquitetura', value: 'Frontend + API separada' },
@@ -105,11 +77,12 @@ export default function PoupemePage() {
         ]}
       />
 
-      <section className="next-case next-case--light">
-        <div className="shell next-case__inner">
-          <span className="eyebrow">Voltar aos projetos</span>
-          <h2>EVO Gestão</h2>
-          <Link className="button button--primary" href="/projetos/evo-gestao">Ver case <ArrowIcon /></Link>
+      <section className="next-case">
+        <div className="shell">
+          <Reveal variant="rule" className="next-case__inner">
+            <p>Outro projeto</p>
+            <Link href="/projetos/evo-gestao">EVO Gestão</Link>
+          </Reveal>
         </div>
       </section>
     </>

@@ -1,0 +1,758 @@
+/* Estilos da seção de Marketing (desativada por enquanto — veja src/lib/features.json).
+   Carregado só pelas rotas que usam estes componentes. As variáveis abaixo preservam o visual original. */
+:root {
+  --blue: #1649d8;
+  --violet: #6d5dfc;
+  --shadow-soft: 0 18px 50px rgba(21, 24, 30, 0.08);
+  --type-page-title: clamp(3rem, 4.2vw, 4.1rem);
+  --type-section-title: clamp(2.25rem, 3.25vw, 3.15rem);
+  --type-card-title: clamp(1.3rem, 1.65vw, 1.7rem);
+  --type-lead: clamp(1rem, 1.15vw, 1.08rem);
+  --type-body: 1rem;
+  --leading-display: 1.01;
+  --leading-section: 1.06;
+  --leading-lead: 1.64;
+  --leading-body: 1.68;
+}
+
+.section--concept-index { background: #fff;
+}
+
+.concept-index-grid { display: grid; grid-template-columns: minmax(300px,.58fr) minmax(0,1.15fr); gap: clamp(60px,8vw,110px); align-items: center;
+}
+
+.concept-index-copy h2 { margin: 14px 0 17px; font-size: clamp(2.5rem,4.2vw,4.3rem); letter-spacing: -.05em; line-height: 1;
+}
+
+.concept-index-copy > p { color: var(--muted); line-height: 1.7;
+}
+
+.concept-dl { margin: 30px 0; border-top: 1px solid var(--line);
+}
+
+.concept-dl div { padding: 17px 0; border-bottom: 1px solid var(--line);
+}
+
+.concept-dl dt { margin-bottom: 5px; color: var(--ink); font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .1em;
+}
+
+.concept-dl dd { margin: 0; color: var(--muted); font-size: .9rem;
+}
+
+.marketing-study { min-width: 0; border: 1px solid rgba(17,17,20,.08); border-radius: 28px; background: #ece8e1; padding: 18px; box-shadow: var(--shadow-soft);
+}
+
+.marketing-study__header { display: flex; justify-content: space-between; gap: 12px; padding: 3px 4px 14px; color: #68645f; font-size: .56rem; font-weight: 700; letter-spacing: .09em;
+}
+
+.study-signature { margin-top: auto; font-size: .52rem; color: #7f7b74;
+}
+
+.study-shapes { position: absolute; right: -24px; bottom: 42px; width: 180px; height: 160px;
+}
+
+.study-shapes i { position: absolute; width: 104px; height: 104px; border-radius: 50%; opacity: .88;
+}
+
+.study-shapes i:nth-child(1) { left: 0; top: 10px; background: #6555ee;
+}
+
+.study-shapes i:nth-child(2) { right: 0; top: 40px; background: #f2b4af;
+}
+
+.study-shapes i:nth-child(3) { left: 46px; bottom: 0; background: #f3d17e; mix-blend-mode: multiply;
+}
+
+.study-carousel__footer { display: flex; gap: 5px; margin-top: auto; padding-top: 24px;
+}
+
+.study-carousel__footer i { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,.22);
+}
+
+.study-carousel__footer i:first-child { background: white;
+}
+
+.discipline-hero { padding: clamp(76px,9vw,126px) 0; overflow: hidden;
+}
+
+.discipline-hero--tech { background: #0b0f17; color: white;
+}
+
+.discipline-hero__grid { display: grid; grid-template-columns: minmax(320px,.62fr) minmax(0,1.15fr); gap: clamp(54px,7vw,96px); align-items: center;
+}
+
+.discipline-hero__copy h1 { margin: 16px 0 24px; font-size: clamp(3.2rem,5vw,5rem); line-height: .99; letter-spacing: -.06em;
+}
+
+.discipline-hero__copy > p { max-width: 620px; margin: 0 0 31px; color: rgba(255,255,255,.64); font-size: 1.08rem; line-height: 1.67;
+}
+
+.discipline-hero__visual { min-width: 0;
+}
+
+.discipline-hero--marketing { background: #f3f0ff; color: var(--ink);
+}
+
+.marketing-hero-grid { display: grid; grid-template-columns: minmax(320px,.7fr) minmax(0,.9fr); gap: clamp(60px,8vw,110px); align-items: center;
+}
+
+.discipline-hero__copy--marketing > p { color: #5d596a;
+}
+
+.service-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line);
+}
+
+.service-grid .reveal { border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+
+.service-item { height: 100%; min-height: 270px; padding: 28px;
+}
+
+.service-item > span { color: var(--blue); font-size: .68rem; font-weight: 700;
+}
+
+.service-item h3 { margin: 54px 0 10px; font-size: 1.4rem; letter-spacing: -.03em;
+}
+
+.service-item p { margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.65;
+}
+
+.service-grid--marketing .service-item > span { color: var(--violet);
+}
+
+.section--concept-study { background: #fff;
+}
+
+.concept-study-grid { display: grid; grid-template-columns: minmax(300px,.58fr) minmax(0,1.2fr); gap: clamp(56px,8vw,110px); align-items: center;
+}
+
+.concept-study-copy h2 { margin: 14px 0 15px; font-size: clamp(2.8rem,4.6vw,4.6rem); line-height: 1; letter-spacing: -.055em;
+}
+
+.concept-study-lead { margin: 0; color: var(--muted); font-size: 1.02rem; line-height: 1.65;
+}
+
+.concept-story { margin-top: 30px; border-top: 1px solid var(--line);
+}
+
+.concept-story article { padding: 16px 0; border-bottom: 1px solid var(--line);
+}
+
+.concept-story span { display: block; margin-bottom: 4px; font-size: .66rem; font-weight: 700; text-transform: uppercase; letter-spacing: .09em;
+}
+
+.concept-story p { margin: 0; color: var(--muted); font-size: .88rem;
+}
+
+.section--marketing-process { background: #111114; color: white;
+}
+
+.marketing-process-grid { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.marketing-process-grid li { padding: 28px 24px; border-right: 1px solid rgba(255,255,255,.12);
+}
+
+.marketing-process-grid li:last-child { border-right: 0;
+}
+
+.marketing-process-grid span { color: #9c8dff; font-size: .67rem; font-weight: 700;
+}
+
+.marketing-process-grid strong { display: block; margin: 44px 0 9px; font-size: 1.2rem;
+}
+
+.marketing-process-grid p { margin: 0; color: rgba(255,255,255,.58); font-size: .84rem;
+}
+
+@media (max-width: 1120px) {
+  .service-grid { grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  .marketing-process-grid { grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  .marketing-process-grid li { border-bottom: 1px solid rgba(255,255,255,.12);
+  }
+}
+
+@media (max-width: 900px) {
+  .discipline-hero__grid, .marketing-hero-grid, .concept-index-grid, .concept-study-grid { grid-template-columns: 1fr;
+  }
+  .discipline-hero__copy { max-width: 720px;
+  }
+}
+
+@media (max-width: 680px) {
+  .discipline-hero__copy h1 { font-size: clamp(2.75rem,13vw,4rem); line-height: 1; letter-spacing: -.06em;
+  }
+  .concept-study-copy h2 { font-size: clamp(2.35rem,11vw,3.3rem);
+  }
+  .marketing-study { padding: 10px; border-radius: 20px;
+  }
+  .marketing-study__header { flex-direction: column; gap: 3px;
+  }
+  .study-shapes { width: 130px; height: 120px; right: -32px;
+  }
+  .study-shapes i { width: 78px; height: 78px;
+  }
+  .service-grid { grid-template-columns: 1fr; border-left: 0;
+  }
+  .service-grid .reveal { border-left: 0; border-right: 0;
+  }
+  .service-item { min-height: 0; padding: 24px 0;
+  }
+  .service-item h3 { margin-top: 22px;
+  }
+  .marketing-process-grid { grid-template-columns: 1fr;
+  }
+  .marketing-process-grid li { border-right: 0; padding: 22px 0;
+  }
+  .marketing-process-grid strong { margin-top: 18px;
+  }
+}
+
+.discipline-hero__grid > *, .marketing-hero-grid > *, .concept-study-grid > *, .concept-index-grid > * { min-width: 0;
+}
+
+.discipline-hero__copy h1, .marketing-hero-board strong { overflow-wrap: anywhere;
+}
+
+.marketing-hero-system {
+  min-height: 470px;
+  display: grid;
+  grid-template-rows: repeat(3,minmax(0,1fr));
+  gap: 12px;
+}
+
+.marketing-hero-system article {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 46px minmax(135px,.5fr) minmax(0,1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 24px 28px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.76);
+  border: 1px solid rgba(17,17,20,.07);
+  box-shadow: 0 14px 40px rgba(55,42,117,.06);
+}
+
+.marketing-hero-system article:nth-child(2) { background: #18181d; color: #fff;
+}
+
+.marketing-hero-system article:nth-child(3) { background: #735cf4; color: #fff;
+}
+
+.marketing-hero-system span { font-size: .68rem; font-weight: 780; letter-spacing: .08em; color: #6c5af0;
+}
+
+.marketing-hero-system article:nth-child(2) span, .marketing-hero-system article:nth-child(3) span { color: rgba(255,255,255,.62);
+}
+
+.marketing-hero-system strong { font-size: 1.2rem; letter-spacing: -.025em;
+}
+
+.marketing-hero-system p { margin: 0; color: #66636f; font-size: .84rem; line-height: 1.55;
+}
+
+.marketing-hero-system article:nth-child(2) p, .marketing-hero-system article:nth-child(3) p { color: rgba(255,255,255,.64);
+}
+
+.marketing-study { padding: 16px; overflow: hidden;
+}
+
+.marketing-study__header { padding: 4px 4px 14px;
+}
+
+.marketing-study__track {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 12px;
+}
+
+.study-slide {
+  position: relative;
+  min-width: 0;
+  aspect-ratio: 4 / 5;
+  border-radius: 20px;
+  padding: clamp(20px,2.4vw,30px);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.study-slide small { font-size: .55rem; letter-spacing: .1em; font-weight: 760;
+}
+
+.study-slide strong { position: relative; z-index: 2; margin-top: auto; font-size: clamp(1.45rem,2.4vw,2.35rem); line-height: .98; letter-spacing: -.05em;
+}
+
+.study-slide p { position: relative; z-index: 2; margin: 14px 0 0; font-size: .7rem; line-height: 1.5;
+}
+
+.study-slide--poster { background: #fdfbf7; color: #111114;
+}
+
+.study-slide--poster p { color: #65615d;
+}
+
+.study-slide--social { background: #6958f0; color: white;
+}
+
+.study-slide--social p { color: rgba(255,255,255,.72);
+}
+
+.study-slide--carousel { background: #121214; color: white;
+}
+
+.study-slide--carousel p { color: rgba(255,255,255,.62);
+}
+
+.study-slide__number { margin-top: 18px; font-size: .58rem; color: rgba(255,255,255,.6); font-weight: 760; letter-spacing: .08em;
+}
+
+.study-slide .study-shapes { right: -36px; bottom: 68px; transform: scale(.86); transform-origin: bottom right;
+}
+
+.study-slide .study-signature { position: relative; z-index: 2; margin-top: 18px; font-size: .5rem; color: #7f7b74;
+}
+
+.marketing-study__hint { display: none; margin: 10px 4px 0; color: #77726c; font-size: .68rem;
+}
+
+@media (max-width: 1120px) {
+  .marketing-hero-system article { grid-template-columns: 38px minmax(110px,.45fr) minmax(0,1fr); padding: 20px 22px; gap: 16px;
+  }
+  .marketing-study__track { gap: 9px;
+  }
+}
+
+@media (max-width: 900px) {
+  .marketing-hero-system { min-height: 0; grid-template-rows: none; grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+  .marketing-hero-system article { min-height: 210px; display: flex; flex-direction: column; align-items: flex-start;
+  }
+  .marketing-hero-system strong { margin-top: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .marketing-hero-system {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      padding: 0 16px 8px 0;
+  }
+  .marketing-hero-system::-webkit-scrollbar { display: none;
+  }
+  .marketing-hero-system article {
+      flex: 0 0 min(84vw, 330px);
+      min-height: 270px;
+      scroll-snap-align: start;
+      border-radius: 22px;
+      padding: 24px;
+  }
+  .marketing-study { margin-inline: -2px; padding: 11px;
+  }
+  .marketing-study__header { flex-direction: row; align-items: center;
+  }
+  .marketing-study__header span:last-child { display: none;
+  }
+  .marketing-study__track {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+  }
+  .marketing-study__track::-webkit-scrollbar { display: none;
+  }
+  .study-slide {
+      flex: 0 0 min(82vw, 310px);
+      aspect-ratio: 4 / 5;
+      scroll-snap-align: start;
+      border-radius: 18px;
+      padding: 24px;
+  }
+  .study-slide strong { font-size: 2rem;
+  }
+  .marketing-study__hint { display: block;
+  }
+}
+
+@media (max-width: 1120px) and (min-width: 901px) {
+  .marketing-hero-system article {
+      grid-template-columns: 32px minmax(140px,.48fr) minmax(0,1fr);
+      gap: 14px;
+  }
+  .marketing-hero-system strong { font-size: 1.08rem;
+  }
+  .marketing-hero-system p { font-size: .79rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .discipline-hero__grid, .marketing-hero-grid, .concept-index-grid, .concept-study-grid {
+      grid-template-columns: minmax(0, 1fr);
+      width: 100%;
+  }
+  .discipline-hero__copy { max-width: 720px;
+  }
+  .marketing-hero-system {
+      min-height: 0;
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-rows: none;
+  }
+  .marketing-hero-system article {
+      width: 100%;
+      min-height: 150px;
+      display: grid;
+      grid-template-columns: 44px minmax(120px, .45fr) minmax(0, 1fr);
+  }
+  .marketing-study__track {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      overflow: visible;
+  }
+}
+
+@media (max-width: 768px) {
+  .discipline-hero { padding-top: 48px; padding-bottom: 64px;
+  }
+  .discipline-hero__copy h1 {
+      font-size: clamp(2.45rem, 10vw, 3.9rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+      overflow-wrap: normal;
+      word-break: normal;
+  }
+  .concept-study-copy h2 {
+      font-size: clamp(2.15rem, 8.5vw, 3.1rem);
+      line-height: 1.04;
+      letter-spacing: -0.045em;
+  }
+  .service-grid { grid-template-columns: minmax(0, 1fr);
+  }
+  .service-grid .reveal { border-right: 0;
+  }
+  .service-item { min-height: 0; padding: 24px 0;
+  }
+  .marketing-hero-system {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+      overflow: visible;
+      padding: 0;
+      scroll-snap-type: none;
+  }
+  .marketing-hero-system article {
+      width: 100%;
+      min-height: 0;
+      padding: 22px;
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: 36px minmax(110px, .46fr) minmax(0, 1fr);
+      gap: 14px;
+      align-items: center;
+  }
+  .marketing-hero-system strong { margin-top: 0;
+  }
+  .marketing-study {
+      width: 100%;
+      margin-inline: 0;
+      padding: 12px;
+      overflow: hidden;
+  }
+  .marketing-study__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3px;
+  }
+  .marketing-study__header span:last-child { display: block;
+  }
+  .marketing-study__track {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 10px;
+      overflow: visible;
+      padding: 0;
+      scroll-snap-type: none;
+  }
+  .study-slide {
+      width: 100%;
+      max-width: 100%;
+      flex: none;
+      aspect-ratio: 5 / 6;
+      min-height: 0;
+      padding: 24px;
+      scroll-snap-align: none;
+  }
+  .study-slide strong { font-size: clamp(1.9rem, 9vw, 2.55rem);
+  }
+  .marketing-study__hint { display: none;
+  }
+  .marketing-process-grid { grid-template-columns: 1fr;
+  }
+  .marketing-process-grid li { border-right: 0;
+  }
+  .concept-study-grid, .concept-index-grid { gap: 34px;
+  }
+}
+
+@media (max-width: 480px) {
+  .marketing-hero-system article {
+      grid-template-columns: 30px minmax(0, 1fr);
+      gap: 8px 12px;
+      padding: 20px;
+  }
+  .marketing-hero-system article p { grid-column: 2;
+  }
+  .marketing-hero-system strong { font-size: 1.08rem;
+  }
+  .study-slide { aspect-ratio: 4 / 5; padding: 22px;
+  }
+  .study-slide .study-shapes { transform: scale(.72); right: -48px; bottom: 54px;
+  }
+}
+
+@media (max-width: 360px) {
+  .discipline-hero__copy h1 { font-size: 2.35rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .study-slide .study-shapes {
+      right: -8px;
+      bottom: 42px;
+      transform: scale(.72);
+      transform-origin: bottom right;
+  }
+}
+
+@media (max-width: 480px) {
+  .study-slide .study-shapes {
+      right: -6px;
+      bottom: 42px;
+      transform: scale(.62);
+  }
+}
+
+.study-carousel-viewport {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  margin-top: 14px;
+}
+
+.study-carousel-frame {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(9%);
+  pointer-events: none;
+  animation: marketingCarouselCycle 9s ease-in-out infinite;
+}
+
+.study-carousel-frame--two { animation-delay: 3s;
+}
+
+.study-carousel-frame--three { animation-delay: 6s;
+}
+
+.study-carousel-frame strong {
+  margin-top: 0;
+}
+
+.study-carousel-frame p {
+  margin-top: 16px;
+}
+
+.study-carousel__footer {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  gap: 7px;
+  margin-top: 18px;
+}
+
+.study-carousel__footer i {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.24);
+  animation: marketingCarouselDot 9s ease-in-out infinite;
+}
+
+.study-carousel__footer i:nth-child(2) { animation-delay: 3s;
+}
+
+.study-carousel__footer i:nth-child(3) { animation-delay: 6s;
+}
+
+.study-slide--poster p {
+  color: #3f3d39;
+  font-size: .84rem;
+  line-height: 1.58;
+  font-weight: 560;
+}
+
+@keyframes marketingCarouselCycle {
+  0%, 27% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  32%, 100% {
+    opacity: 0;
+    transform: translateX(-9%);
+  }
+}
+
+@keyframes marketingCarouselDot {
+  0%, 27% {
+    background: #fff;
+    transform: scale(1.08);
+  }
+  32%, 100% {
+    background: rgba(255,255,255,.24);
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .marketing-hero-system, .marketing-study__track {
+      display: flex !important;
+      grid-template-columns: none !important;
+      overflow-x: auto !important;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory !important;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior-x: contain;
+  }
+  .marketing-hero-system::-webkit-scrollbar, .marketing-study__track::-webkit-scrollbar {
+      display: none;
+  }
+  .marketing-hero-system {
+      gap: 12px;
+      padding: 0 16px 8px 0 !important;
+  }
+  .marketing-hero-system article {
+      flex: 0 0 min(84vw, 330px) !important;
+      width: auto !important;
+      min-height: 270px !important;
+      display: flex !important;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 24px !important;
+      border-radius: 22px;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+  }
+  .marketing-hero-system article strong {
+      margin-top: auto;
+  }
+  .marketing-study__track {
+      gap: 10px;
+      padding: 0 4px 5px 0 !important;
+  }
+  .marketing-study .study-slide {
+      flex: 0 0 min(82vw, 310px) !important;
+      width: auto !important;
+      max-width: none !important;
+      aspect-ratio: 4 / 5 !important;
+      padding: 24px !important;
+      scroll-snap-align: start;
+      scroll-snap-stop: always;
+  }
+  .marketing-study__hint {
+      display: block !important;
+      margin: 10px 4px 0;
+      color: #77726c;
+      font-size: .68rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .study-slide--poster p {
+      max-width: 92%;
+      font-size: .92rem;
+      line-height: 1.58;
+      color: #34322f;
+  }
+  .study-slide--carousel .study-carousel-frame strong {
+      font-size: clamp(2rem, 9vw, 2.55rem);
+      line-height: 1.02;
+  }
+  .study-slide--carousel .study-carousel-frame p {
+      max-width: 95%;
+      font-size: .9rem;
+      line-height: 1.58;
+      color: rgba(255,255,255,.78);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .study-carousel-frame, .study-carousel__footer i {
+      animation: none !important;
+  }
+  .study-carousel-frame {
+      opacity: 0;
+      transform: none;
+  }
+  .study-carousel-frame--one {
+      opacity: 1;
+  }
+  .study-carousel__footer i:first-child {
+      background: #fff;
+  }
+}
+
+.discipline-hero__copy h1 {
+  font-size: var(--type-page-title);
+  line-height: var(--leading-display);
+  letter-spacing: -.052em;
+  font-weight: 735;
+}
+
+.concept-study-copy h2, .concept-index-copy h2 {
+  font-size: var(--type-section-title);
+  line-height: var(--leading-section);
+  letter-spacing: -.045em;
+}
+
+.service-item h3, .marketing-process-grid strong {
+  font-size: var(--type-card-title);
+  line-height: 1.12;
+  letter-spacing: -.03em;
+}
+
+.discipline-hero__copy > p, .concept-study-lead {
+  font-size: var(--type-lead);
+  line-height: var(--leading-lead);
+}
+
+.service-item p, .marketing-process-grid p, .concept-story p {
+  font-size: var(--type-body);
+  line-height: var(--leading-body);
+}
+
+@media (max-width: 680px) {
+  .discipline-hero__copy h1, .concept-study-copy h2, .concept-index-copy h2 {
+      letter-spacing: -.042em;
+  }
+}
+
+/* Peças de apoio que só as páginas de Marketing usam. O resto do site não depende delas. */
+.eyebrow { display: inline-flex; font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.eyebrow--light { color: rgba(255, 255, 255, .62); }
+.section-heading { max-width: 760px; margin-bottom: clamp(32px, 5vw, 56px); }
+.section-heading h2 { margin-top: 12px; }
+.section-heading p { margin-top: 14px; color: var(--muted); }
+.section-heading--split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(24px, 5vw, 64px); align-items: end; max-width: none; }
+.section-heading--split p { margin-top: 0; }
+@media (max-width: 960px) { .section-heading--split { grid-template-columns: minmax(0, 1fr); } }

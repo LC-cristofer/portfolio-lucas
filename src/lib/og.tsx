@@ -13,22 +13,18 @@ export function renderOgImage() {
           height: '100%',
           display: 'flex',
           flexDirection: 'column',
-          justifyContent: 'space-between',
-          padding: '72px 80px',
-          background: '#0b0b0d',
+          justifyContent: 'flex-end',
+          padding: '80px',
+          background: '#13233a',
           color: '#ffffff',
         }}
       >
-        <div style={{ display: 'flex', fontSize: 30, letterSpacing: 2, color: '#6aa9ff' }}>
-          {site.role.toUpperCase()}
+        <div style={{ display: 'flex', fontSize: 34, color: '#8fb4ff', marginBottom: 20 }}>{site.role}</div>
+        <div style={{ display: 'flex', fontSize: 104, fontWeight: 700, lineHeight: 1.02 }}>{site.name}</div>
+        <div style={{ display: 'flex', marginTop: 32, fontSize: 38, lineHeight: 1.3, color: '#c4cfe0', maxWidth: 900 }}>
+          {site.tagline}
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div style={{ display: 'flex', fontSize: 92, fontWeight: 700, lineHeight: 1.05 }}>{site.name}</div>
-          <div style={{ display: 'flex', marginTop: 28, fontSize: 38, lineHeight: 1.3, color: '#c9ccd3', maxWidth: 940 }}>
-            Sites, sistemas e comunicação que ajudam negócios a operar e vender melhor.
-          </div>
-        </div>
-        <div style={{ display: 'flex', fontSize: 28, color: '#8b8f98' }}>Curitiba · Projetos remotos e presenciais</div>
+        <div style={{ display: 'flex', marginTop: 48, fontSize: 28, color: '#8693a8' }}>{site.city}, projetos remotos e presenciais</div>
       </div>
     ),
     { ...ogSize },

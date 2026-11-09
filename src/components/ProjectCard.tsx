@@ -1,25 +1,26 @@
 import Link from 'next/link';
 import type { Project } from '@/lib/projects';
-import { ArrowIcon } from './ArrowIcon';
 import { ProjectVisual } from './ProjectVisual';
+import { Reveal } from './Reveal';
 
-export function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
+/** Um projeto por linha: tela do produto de um lado, texto do outro. `reverse` inverte os lados. */
+export function ProjectCard({ project, reverse = false }: { project: Project; reverse?: boolean }) {
+  const href = `/projetos/${project.slug}`;
+
   return (
-    <article className={`project-card project-card--${project.theme} ${featured ? 'is-featured' : ''}`}>
-      <div className="project-card__visual">
-        <ProjectVisual project={project} compact={!featured} />
-      </div>
-      <div className="project-card__content">
-        <div className="project-card__meta">
-          <span>Projeto real</span>
-          <span>{project.year}</span>
-        </div>
-        <h3>{project.title}</h3>
-        <p>{project.summary}</p>
-        <Link className="text-link" href={`/projetos/${project.slug}`}>
-          Ver estudo de caso <ArrowIcon size={16} />
+    <Reveal as="article" variant="rule" className={`project-row${reverse ? ' is-reverse' : ''}`}>
+      <Reveal variant="window" delay={140} className="project-row__visual">
+        <Link href={href} tabIndex={-1} aria-hidden="true">
+          <ProjectVisual project={project} />
         </Link>
-      </div>
-    </article>
+      </Reveal>
+      <Reveal delay={80} className="project-row__text">
+        <h3>{project.title}</h3>
+        <p className="project-row__kind">{project.kind}, {project.year}</p>
+        <p>{project.summary}</p>
+        <p className="project-row__stack">{project.stack.join(', ')}</p>
+        <Link className="text-link" href={href}>Ler o estudo de caso</Link>
+      </Reveal>
+    </Reveal>
   );
 }

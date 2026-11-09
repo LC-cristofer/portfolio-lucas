@@ -1,32 +1,32 @@
 import Link from 'next/link';
+import { FooterCta } from '@/components/FooterCta';
 import { SocialLinks } from '@/components/SocialLinks';
-import { site } from '@/lib/site';
+import { features, site } from '@/lib/site';
+
+const links = [
+  { href: '/projetos', label: 'Projetos' },
+  { href: '/tecnologia', label: 'Serviços' },
+  ...(features.marketing ? [{ href: '/marketing', label: 'Marketing' }] : []),
+  { href: '/sobre', label: 'Sobre' },
+  { href: '/contato', label: 'Contato' },
+];
 
 export function Footer() {
   return (
     <footer className="site-footer">
+      <FooterCta />
       <div className="shell footer-grid">
-        <div className="footer-lead">
-          <span className="eyebrow eyebrow--light">Lucas Cristofer</span>
-          <p>Marketing, design e tecnologia para transformar presença digital em resultado.</p>
+        <div className="footer-brand">
+          <strong>{site.name}</strong>
+          <span>{site.city}, projetos remotos e presenciais</span>
         </div>
-        <nav className="footer-nav" aria-label="Navegação do rodapé">
-          <Link href="/">Home</Link>
-          <Link href="/projetos">Portfólio</Link>
-          <Link href="/tecnologia">Tecnologia</Link>
-          <Link href="/marketing">Marketing</Link>
-          <Link href="/sobre">Sobre</Link>
-          <Link href="/contato">Contato</Link>
+        <nav className="footer-nav" aria-label="Rodapé">
+          {links.map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}
         </nav>
-        <div className="footer-contact">
-          <a href={`mailto:${site.email}`}>{site.email}</a>
-          <a href={site.whatsapp} target="_blank" rel="noopener noreferrer">{site.whatsappNumber} ↗</a>
-          <SocialLinks compact light />
-        </div>
+        <SocialLinks light />
       </div>
       <div className="shell footer-bottom">
-        <span>© {new Date().getFullYear()} Lucas Cristofer</span>
-        <span>Curitiba · Projetos remotos e presenciais</span>
+        <span>© {new Date().getFullYear()} {site.name}</span>
       </div>
     </footer>
   );

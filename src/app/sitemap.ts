@@ -1,8 +1,17 @@
 import type { MetadataRoute } from 'next';
-import { siteUrl } from '@/lib/site';
+import { features, siteUrl } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ['', '/projetos', '/projetos/evo-gestao', '/projetos/poupeme', '/tecnologia', '/marketing', '/sobre', '/contato'];
+  const routes = [
+    '',
+    '/projetos',
+    '/projetos/evo-gestao',
+    '/projetos/poupeme',
+    '/tecnologia',
+    ...(features.marketing ? ['/marketing'] : []),
+    '/sobre',
+    '/contato',
+  ];
   return routes.map((route) => ({
     url: `${siteUrl}${route}`,
     lastModified: new Date(),

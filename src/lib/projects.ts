@@ -1,7 +1,8 @@
 export type Project = {
   slug: 'evo-gestao' | 'poupeme';
   title: string;
-  label: string;
+  /** Tipo de produto, em linguagem simples. */
+  kind: string;
   year: string;
   summary: string;
   challenge: string;
@@ -18,7 +19,7 @@ export const projects: Project[] = [
   {
     slug: 'evo-gestao',
     title: 'EVO Gestão',
-    label: 'Produto digital · Operações e RH',
+    kind: 'Gestão de pessoas e operações',
     year: '2026',
     summary:
       'Plataforma full stack para centralizar pessoas, admissões, documentos, indicadores e rotinas administrativas.',
@@ -37,7 +38,7 @@ export const projects: Project[] = [
   {
     slug: 'poupeme',
     title: 'POUPEME',
-    label: 'Produto digital · Finanças',
+    kind: 'Finanças pessoais',
     year: '2026',
     summary:
       'Sistema financeiro full stack com autenticação, transações, categorias, metas e leitura visual da saúde financeira.',
