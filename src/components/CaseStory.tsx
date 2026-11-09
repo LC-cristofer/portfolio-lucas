@@ -1,8 +1,8 @@
-import type { Project } from '@/lib/projects';
+import type { CaseProject } from '@/lib/projects';
 import { Reveal } from './Reveal';
 
 type CaseStoryProps = {
-  project: Project;
+  project: CaseProject;
   /** Títulos das três linhas: problema, direção e resultado. */
   headings: [string, string, string];
   scopeHeading: string;

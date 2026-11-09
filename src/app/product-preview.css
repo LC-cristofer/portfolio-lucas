@@ -287,3 +287,72 @@
   .preview-panel--list, .preview-panel--donut { display: none;
   }
 }
+
+/* ---------- Entrada em sequência (Espresso e Social Agent V2) ----------
+   Cada elemento com .pv-step entra na ordem de --step. */
+@media (prefers-reduced-motion: no-preference) {
+  .product-preview .pv-step { transition: opacity .7s var(--ease-out), transform .9s var(--ease-out); transition-delay: calc(var(--reveal-delay, 0ms) + .3s + var(--step, 0) * .12s); }
+  .reveal:not([data-visible="true"]) .product-preview .pv-step { opacity: 0; transform: translateY(8px); }
+
+  .sa-link::before, .sa-link::after, .sa-link i { transition: transform .7s var(--ease-out); }
+  .sa-link::before { transform-origin: 50% 0; transition-delay: calc(var(--reveal-delay, 0ms) + .8s); }
+  .sa-link::after { transform-origin: 0 50%; transition-delay: calc(var(--reveal-delay, 0ms) + .6s); }
+  .sa-link i { transform-origin: 0 50%; transition-delay: calc(var(--reveal-delay, 0ms) + 1s); }
+  .sa-link--merge::before { transition-delay: calc(var(--reveal-delay, 0ms) + 1.45s); }
+  .sa-link--merge::after { transition-delay: calc(var(--reveal-delay, 0ms) + 1.65s); }
+  .sa-link--merge i { transition-delay: calc(var(--reveal-delay, 0ms) + 1.25s); }
+  .reveal:not([data-visible="true"]) .sa-link::before { transform: scaleY(0); }
+  .reveal:not([data-visible="true"]) .sa-link::after,
+  .reveal:not([data-visible="true"]) .sa-link i { transform: scaleX(0); }
+}
+
+/* ---------- Espresso Idiomas: prévia ilustrativa do site ---------- */
+.product-preview--espresso { background: #fdfbf7; border-color: rgba(44, 24, 16, .12); box-shadow: 0 1px 2px rgba(44, 24, 16, .06), 0 28px 60px -28px rgba(44, 24, 16, .4); }
+.browser-bar--warm { background: #f3ece1; border-color: #e5dccd; color: #8d7361; }
+.browser-bar--warm .browser-dots span { background: #d3c9bf; }
+.browser-bar--warm .browser-status { background: rgba(176, 125, 78, .14); color: #8a5a2c; }
+
+.espresso-preview__body { height: calc(100% - 42px); display: flex; flex-direction: column; padding: clamp(14px, 2vw, 22px) clamp(16px, 2.6vw, 32px) clamp(14px, 2vw, 24px); color: #2c1810; }
+.es-nav { display: flex; align-items: center; gap: 12px; }
+.es-nav b { margin-right: auto; font-size: .78rem; letter-spacing: -.01em; }
+.es-nav span { width: 26px; height: 5px; border-radius: 999px; background: #d3c9bf; }
+.es-nav i { width: 54px; height: 16px; border-radius: 999px; background: #d4a373; }
+
+.es-hero { flex: 1 1 0; min-height: 0; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr); gap: clamp(14px, 2.6vw, 34px); align-items: center; }
+.es-hero__text { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.es-hero__text strong { display: block; font-size: clamp(.78rem, 2.1vw, 1.3rem); line-height: 1.12; letter-spacing: -.02em; }
+.es-bar { display: block; width: 92%; height: 5px; border-radius: 999px; background: #e3dacd; }
+.es-bar--short { width: 62%; }
+.es-button { display: block; width: 84px; height: 20px; margin-top: 6px; border-radius: 999px; background: #2c1810; }
+
+.es-hero__art { position: relative; align-self: stretch; margin: 8px 0; border-radius: 12px; background: #caa27a; overflow: hidden; }
+.es-play { position: absolute; left: 50%; top: 46%; width: 34px; height: 34px; margin: -17px 0 0 -17px; border-radius: 50%; background: #fdfbf7; }
+.es-play::after { content: ""; position: absolute; left: 14px; top: 10px; border-left: 11px solid #2c1810; border-top: 7px solid transparent; border-bottom: 7px solid transparent; }
+.es-card { position: absolute; height: 14px; border-radius: 4px; background: rgba(253, 251, 247, .92); }
+.es-card--a { left: 10%; bottom: 14%; width: 46%; }
+.es-card--b { right: 8%; top: 12%; width: 30%; background: #2c1810; }
+
+/* ---------- Social Agent V2: diagrama da estrutura ---------- */
+.agent-preview__body { height: calc(100% - 42px); }
+.agent-preview__body .preview-main { height: 100%; }
+
+.sa-tree { --h: clamp(24px, 3vw, 36px); --g: clamp(8px, 1.3vw, 16px); flex: 1 1 0; min-height: 0; display: grid; grid-template-columns: minmax(0, .8fr) 22px minmax(0, 1fr) 22px minmax(0, 1.55fr); align-items: center; }
+.sa-col { display: flex; flex-direction: column; min-width: 0; }
+.sa-stack { gap: var(--g); }
+.sa-networks { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--g) 8px; }
+
+.sa-chip { height: var(--h); display: flex; align-items: center; padding: 0 8px; border-radius: 5px; border: 1px solid #202737; background: #121722; color: #c9d2df; font-size: clamp(.56rem, 1.05vw, .76rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sa-chip--root { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+.sa-chip--net { background: rgba(54, 227, 181, .07); border-color: rgba(54, 227, 181, .28); color: var(--mint); }
+
+/* Conectores: um colchete que abre da agência para os clientes e outro (espelhado) que fecha nas redes. */
+.sa-link { position: relative; height: calc(var(--h) * 3 + var(--g) * 2); }
+.sa-link::before { content: ""; position: absolute; left: 50%; top: calc(var(--h) / 2); bottom: calc(var(--h) / 2); width: 1px; background: #2c3750; }
+.sa-link::after { content: ""; position: absolute; left: 0; width: 50%; top: 50%; height: 1px; background: #2c3750; }
+.sa-link i { position: absolute; left: 50%; right: 0; height: 1px; background: #2c3750; }
+.sa-link i:nth-child(1) { top: calc(var(--h) / 2); }
+.sa-link i:nth-child(2) { top: 50%; }
+.sa-link i:nth-child(3) { bottom: calc(var(--h) / 2); }
+.sa-link--merge { transform: scaleX(-1); }
+
+.sa-note { margin-top: 10px; color: #667086; font-size: clamp(.54rem, .95vw, .7rem); }

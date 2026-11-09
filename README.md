@@ -6,10 +6,20 @@ Portfólio técnico em Next.js (App Router) + React + TypeScript.
 
 - **Home** — apresentação, os dois projetos e quem sou eu.
 - **Projetos** — EVO Gestão e POUPEME, cada um com estudo de caso em duas camadas: visão de produto (problema, direção, escopo, tecnologias) e visão técnica (arquitetura, decisões, trade-offs, segurança, manutenção, deploy e próximos passos).
+  Espresso Idiomas e Social Agent V2 aparecem só como card, com a tag "Em construção" (sem página própria).
 - **Serviços** (`/tecnologia`) — o que faço e como construo. `/servicos` redireciona para `/tecnologia`.
 - **Sobre** e **Contato** — formulário via `mailto:` e canais diretos (WhatsApp e e-mail).
 
 O EVO Gestão exibe apenas dados fictícios; dados pessoais reais não são publicados.
+
+## Projetos
+
+Tudo sai de `src/lib/projects.ts`:
+
+- `caseStudy: true` → card + página `/projetos/[slug]` (EVO Gestão e POUPEME). Só esses aparecem na home.
+- `caseStudy: false` → só o card em `/projetos`. `link` é opcional e vira o botão do card (Espresso aponta para o site publicado).
+- `inProgress: true` mostra a tag "Em construção". Para tirar, apague essa linha do projeto.
+- A prévia de cada projeto é desenhada em `src/components/ProjectVisual.tsx`. A da Espresso é ilustrativa; a do Social Agent V2 mostra a estrutura (agência, clientes e redes) descrita no repositório.
 
 ## Marketing (desativado por enquanto)
 

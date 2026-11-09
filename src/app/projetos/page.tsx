@@ -7,7 +7,7 @@ import { features } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Projetos',
-  description: 'Dois produtos digitais completos, com a leitura técnica de cada um: arquitetura, decisões, segurança e próximos passos.',
+  description: 'Quatro projetos: dois produtos completos com estudo de caso técnico (arquitetura, decisões, segurança e próximos passos) e dois em construção.',
 };
 
 export default function ProjectsPage() {
@@ -17,7 +17,7 @@ export default function ProjectsPage() {
         <div className="shell">
           <h1><SplitText text="Projetos" /></h1>
           <p className="page-intro__lead">
-            Produtos que construí do banco de dados à interface. Cada estudo de caso mostra a arquitetura, as decisões, os trade-offs e o que eu faria na próxima versão.
+            Produtos que construí do banco de dados à interface. Os dois primeiros têm estudo de caso completo, com arquitetura, decisões e trade-offs. Os outros dois estão em construção.
           </p>
         </div>
       </section>

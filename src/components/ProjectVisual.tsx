@@ -1,5 +1,9 @@
+import type { CSSProperties } from 'react';
 import type { Project } from '@/lib/projects';
 import { CountUp } from './CountUp';
+
+/** Ordem de entrada dos elementos da prévia (veja .pv-step em product-preview.css). */
+const step = (n: number) => ({ '--step': n }) as CSSProperties;
 
 /**
  * Prévias das interfaces, desenhadas em HTML/SVG com dados de exemplo.
@@ -113,6 +117,90 @@ function PoupemeVisual() {
   );
 }
 
+function EspressoVisual() {
+  return (
+    <div className="product-preview product-preview--espresso" role="img" aria-label="Prévia ilustrativa do site da Espresso Idiomas">
+      <div className="browser-bar browser-bar--warm">
+        <div className="browser-dots"><span /><span /><span /></div>
+        <span className="browser-title">espressoidiomas.com</span>
+        <span className="browser-status">Prévia ilustrativa</span>
+      </div>
+      <div className="espresso-preview__body">
+        <div className="es-nav pv-step" style={step(0)}>
+          <b>Espresso</b>
+          <span /><span /><span />
+          <i />
+        </div>
+        <div className="es-hero">
+          <div className="es-hero__text">
+            <strong className="pv-step" style={step(1)}>Assista uma aula online.</strong>
+            <strong className="pv-step" style={step(2)}>Apaixone-se pela metodologia.</strong>
+            <span className="es-bar pv-step" style={step(3)} />
+            <span className="es-bar es-bar--short pv-step" style={step(4)} />
+            <i className="es-button pv-step" style={step(5)} />
+          </div>
+          <div className="es-hero__art pv-step" style={step(3)}>
+            <span className="es-play" />
+            <span className="es-card es-card--a" />
+            <span className="es-card es-card--b" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+const networks = ['Instagram', 'Facebook', 'TikTok', 'LinkedIn', 'X', 'Threads'];
+
+function SocialAgentVisual() {
+  return (
+    <div className="product-preview product-preview--agent" role="img" aria-label="Diagrama da estrutura do Social Agent V2: uma agência, vários clientes e seis redes sociais">
+      <div className="browser-bar browser-bar--dark">
+        <div className="browser-dots"><span /><span /><span /></div>
+        <span className="browser-title">Social Agent V2, estrutura</span>
+        <span className="browser-status">Fase 0</span>
+      </div>
+      <div className="agent-preview__body">
+        <div className="preview-main preview-main--dark">
+          <div className="preview-heading-row preview-heading-row--dark">
+            <div>
+              <small>Multi-tenant</small>
+              <strong>Uma agência, vários clientes, seis redes</strong>
+            </div>
+          </div>
+          <div className="sa-tree">
+            <div className="sa-col">
+              <span className="sa-chip sa-chip--root pv-step" style={step(1)}>Agência</span>
+            </div>
+            <div className="sa-link" aria-hidden="true"><i /><i /><i /></div>
+            <div className="sa-col sa-stack">
+              <span className="sa-chip pv-step" style={step(4)}>Cliente A</span>
+              <span className="sa-chip pv-step" style={step(5)}>Cliente B</span>
+              <span className="sa-chip pv-step" style={step(6)}>Cliente C</span>
+            </div>
+            <div className="sa-link sa-link--merge" aria-hidden="true"><i /><i /><i /></div>
+            <div className="sa-col sa-networks">
+              {networks.map((name, index) => (
+                <span key={name} className="sa-chip sa-chip--net pv-step" style={step(13 + index * 0.6)}>{name}</span>
+              ))}
+            </div>
+          </div>
+          <p className="sa-note pv-step" style={step(17)}>Cada rede recebe uma variante própria do conteúdo.</p>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function ProjectVisual({ project }: { project: Project }) {
-  return project.slug === 'evo-gestao' ? <EvoVisual /> : <PoupemeVisual />;
+  switch (project.slug) {
+    case 'evo-gestao':
+      return <EvoVisual />;
+    case 'poupeme':
+      return <PoupemeVisual />;
+    case 'espresso':
+      return <EspressoVisual />;
+    case 'social-agent':
+      return <SocialAgentVisual />;
+  }
 }

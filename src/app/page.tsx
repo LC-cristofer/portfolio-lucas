@@ -35,7 +35,7 @@ export default function HomePage() {
             <p>Dois produtos completos, do banco de dados à interface. Cada um tem um estudo de caso com as decisões técnicas.</p>
           </Reveal>
           <div className="project-list">
-            {projects.map((project, index) => (
+            {projects.filter((project) => project.caseStudy).map((project, index) => (
               <ProjectCard key={project.slug} project={project} reverse={index % 2 === 1} />
             ))}
           </div>

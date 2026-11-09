@@ -78,7 +78,8 @@ const noScriptCss =
   '.reveal--rule::before{transform:none!important}' +
   '.reveal--rule>*{opacity:1!important;transform:none!important}' +
   '.product-preview .draw{stroke-dashoffset:0!important}.product-preview .area{opacity:1!important}' +
-  '.product-preview .preview-heading-row,.product-preview .preview-kpis>div,.product-preview .task-row,.product-preview .donut-ring{opacity:1!important;transform:none!important}';
+  '.product-preview .preview-heading-row,.product-preview .preview-kpis>div,.product-preview .task-row,.product-preview .donut-ring,.product-preview .pv-step{opacity:1!important;transform:none!important}' +
+  '.sa-link::before,.sa-link::after,.sa-link i{transform:none!important}';
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (

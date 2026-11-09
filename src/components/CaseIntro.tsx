@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import type { Project } from '@/lib/projects';
+import type { CaseProject } from '@/lib/projects';
 import { ProjectVisual } from './ProjectVisual';
 import { Reveal } from './Reveal';
 import { SplitText } from './SplitText';
 
 /** Abertura de um estudo de caso: título, resumo, ficha rápida e a tela do produto. */
-export function CaseIntro({ project, note }: { project: Project; note?: string }) {
+export function CaseIntro({ project, note }: { project: CaseProject; note?: string }) {
   return (
     <section className="case-intro">
       <div className="shell case-intro__top">
