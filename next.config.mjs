@@ -11,7 +11,7 @@ const contentSecurityPolicy = [
   "style-src 'self' 'unsafe-inline'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''}`,
   `connect-src 'self'${isDev ? ' ws: http: https:' : ''}`,
-  "media-src 'self' https:",
+  "media-src 'self'",
   "worker-src 'self' blob:",
   "manifest-src 'self'",
   ...(isDev ? [] : ['upgrade-insecure-requests']),
@@ -40,6 +40,10 @@ const nextConfig = {
         pathname: '/photo-*',
       },
     ],
+  },
+  async redirects() {
+    // A página Serviços foi incorporada às páginas Tecnologia e Marketing.
+    return [{ source: '/servicos', destination: '/tecnologia', permanent: true }];
   },
   async headers() {
     return [

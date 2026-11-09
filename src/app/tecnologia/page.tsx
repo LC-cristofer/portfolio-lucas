@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ArrowIcon } from '@/components/ArrowIcon';
-import { ProjectCard } from '@/components/ProjectCard';
 import { ProjectVisual } from '@/components/ProjectVisual';
 import { Reveal } from '@/components/Reveal';
 import { projects } from '@/lib/projects';
@@ -21,7 +20,10 @@ export default function TechnologyPage() {
             <span className="eyebrow eyebrow--light">Tecnologia</span>
             <h1>Tecnologia para transformar processo em produto e ideia em experiência.</h1>
             <p>Sites, sistemas e produtos digitais com interface clara, estrutura técnica sólida e espaço para evoluir conforme o negócio cresce.</p>
-            <Link className="button button--light" href="/contato">Falar sobre tecnologia <ArrowIcon /></Link>
+            <div className="closing-actions">
+              <Link className="button button--light" href="/contato">Falar sobre tecnologia <ArrowIcon /></Link>
+              <Link className="text-link text-link--light" href="/projetos">Ver projetos <ArrowIcon /></Link>
+            </div>
           </div>
           <div className="discipline-hero__visual"><ProjectVisual project={evo} compact /></div>
         </div>
@@ -39,15 +41,6 @@ export default function TechnologyPage() {
               ['Manutenção & evolução', 'Correções, melhorias, acompanhamento técnico e evolução contínua do produto.'],
               ['Estrutura digital', 'Domínio, hospedagem, ambientes, analytics e preparação para produção.'],
             ].map(([title, text], index) => <Reveal delay={index * 45} key={title}><article className="service-item"><span>{String(index + 1).padStart(2, '0')}</span><h3>{title}</h3><p>{text}</p></article></Reveal>)}
-          </div>
-        </div>
-      </section>
-
-      <section className="section section--selected-work">
-        <div className="shell">
-          <Reveal><div className="section-heading section-heading--split"><div><span className="eyebrow">Projetos reais</span><h2>Projetos que colocam a tecnologia em uso.</h2></div><p>Dois produtos full stack que mostram minha forma de estruturar interface, dados, regras de negócio e operação.</p></div></Reveal>
-          <div className="project-stack">
-            {projects.map((project, index) => <Reveal key={project.slug} delay={index * 60}><ProjectCard project={project} featured /></Reveal>)}
           </div>
         </div>
       </section>

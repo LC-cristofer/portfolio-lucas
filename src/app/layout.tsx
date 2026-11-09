@@ -28,19 +28,17 @@ export const metadata: Metadata = {
   applicationName: site.name,
   authors: [{ name: site.name }],
   creator: site.name,
-  keywords: ['desenvolvimento web', 'marketing digital', 'landing page', 'site profissional', 'produto digital', 'design', 'Next.js', 'React'],
+  // A imagem de compartilhamento (1200×630) vem de opengraph-image.tsx e twitter-image.tsx.
   openGraph: {
     type: 'website',
     locale: 'pt_BR',
     title: `${site.name} — ${site.role}`,
     description: site.description,
-    images: [{ url: '/images/lucas-hero.webp', width: 1200, height: 1500, alt: 'Lucas Cristofer' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${site.name} — ${site.role}`,
     description: site.description,
-    images: ['/images/lucas-hero.webp'],
   },
   robots: { index: true, follow: true },
 };

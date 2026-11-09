@@ -5,6 +5,6 @@ out
 .env.local
 .DS_Store
 npm-debug.log*
-qa/screens/
-qa/site/
-qa/visual-review-sheet.jpg
+__pycache__/
+*.pyc
+*.tsbuildinfo

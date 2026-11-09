@@ -6,7 +6,7 @@ function EvoVisual({ compact = false }: { compact?: boolean }) {
       <div className="browser-bar">
         <div className="browser-dots"><span /><span /><span /></div>
         <span className="browser-title">EVO Gestão · Dashboard</span>
-        <span className="browser-status">Dados fictícios</span>
+        <span className="browser-status">Dados de exemplo</span>
       </div>
       <div className="evo-preview__body">
         <aside className="preview-sidebar preview-sidebar--light">
@@ -65,7 +65,7 @@ function PoupemeVisual({ compact = false }: { compact?: boolean }) {
       <div className="browser-bar browser-bar--dark">
         <div className="browser-dots"><span /><span /><span /></div>
         <span className="browser-title">POUPEME · Dashboard</span>
-        <span className="browser-status">Produto real</span>
+        <span className="browser-status">Dados de exemplo</span>
       </div>
       <div className="poupeme-preview__body">
         <aside className="preview-sidebar preview-sidebar--dark">

@@ -36,7 +36,7 @@ export function ContactForm() {
       `Olá Lucas,\n\nMeu nome é ${name}.\nE-mail: ${email}\nTipo de projeto: ${project}\n\nContexto:\n${message}\n`
     );
 
-    setStatus('Abrindo seu aplicativo de e-mail…');
+    setStatus(`Abrindo seu aplicativo de e-mail… Se nada abrir, escreva direto para ${site.email}.`);
     window.location.href = `mailto:${site.email}?subject=${subject}&body=${body}`;
   }
 

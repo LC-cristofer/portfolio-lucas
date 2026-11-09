@@ -4,7 +4,6 @@ import { HomeHeroCarousel } from '@/components/HomeHeroCarousel';
 import { ProjectCard } from '@/components/ProjectCard';
 import { Reveal } from '@/components/Reveal';
 import { SocialLinks } from '@/components/SocialLinks';
-// import { VideoShowcase } from '@/components/VideoShowcase'; // Reativar quando o vídeo de apresentação estiver pronto.
 import { projects } from '@/lib/projects';
 import { site } from '@/lib/site';
 
@@ -17,44 +16,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--disciplines">
-        <div className="shell discipline-layout">
-          <Reveal className="discipline-layout__intro">
-            <span className="eyebrow">Serviços</span>
-            <h2>Tecnologia primeiro. Marketing quando a comunicação também precisa mudar.</h2>
-            <p>
-              Você pode contratar uma frente específica ou combinar desenvolvimento, estratégia, conteúdo e design quando o projeto exige uma solução integrada.
-            </p>
-            <div className="home-services-action">
-              <Link className="button button--secondary" href="/servicos">Ver todos os serviços <ArrowIcon /></Link>
-            </div>
-          </Reveal>
-          <div className="discipline-list">
-            <Reveal>
-              <article>
-                <span>01</span>
-                <div><h3>Tecnologia</h3><p>Sites, landing pages, sistemas, dashboards, integrações, automações e manutenção.</p></div>
-                <Link aria-label="Explorar serviços de tecnologia" href="/tecnologia"><ArrowIcon /></Link>
-              </article>
-            </Reveal>
-            <Reveal delay={70}>
-              <article>
-                <span>02</span>
-                <div><h3>Marketing</h3><p>Campanhas, social media, identidade, materiais e organização da presença digital.</p></div>
-                <Link aria-label="Explorar serviços de marketing" href="/marketing"><ArrowIcon /></Link>
-              </article>
-            </Reveal>
-            <Reveal delay={140}>
-              <article>
-                <span>03</span>
-                <div><h3>Projeto integrado</h3><p>Uma direção única para mensagem, experiência e produto digital quando as duas frentes precisam trabalhar juntas.</p></div>
-                <Link aria-label="Explorar serviços integrados" href="/servicos"><ArrowIcon /></Link>
-              </article>
-            </Reveal>
-          </div>
-        </div>
-      </section>
-
       <section className="section section--selected-work">
         <div className="shell">
           <Reveal>
@@ -64,7 +25,7 @@ export default function HomePage() {
                 <h2>Projetos reais para mostrar como eu penso e construo.</h2>
               </div>
               <p>
-                Produtos digitais desenvolvidos com foco em operação, clareza de interface e evolução técnica — com contexto suficiente para entender o que existe por trás da tela.
+                Produtos digitais com foco em operação, clareza de interface e evolução técnica — com contexto suficiente para entender o que existe por trás da tela.
               </p>
             </div>
           </Reveal>
@@ -83,17 +44,6 @@ export default function HomePage() {
 
       <section className="section section--about-home" id="quem-sou-eu">
         <div className="shell about-home-grid about-home-grid--text-only">
-          {/*
-            Vídeo de apresentação temporariamente oculto para o primeiro deploy.
-            Quando o vídeo estiver pronto:
-            1. reative o import de VideoShowcase no topo deste arquivo;
-            2. troque about-home-grid--text-only por about-home-grid--media-first;
-            3. reative o bloco abaixo antes do texto.
-
-            <Reveal className="about-home-media">
-              <VideoShowcase />
-            </Reveal>
-          */}
           <Reveal className="about-home-copy">
             <span className="eyebrow eyebrow--light">Quem sou eu</span>
             <h2>Eu conecto comunicação e tecnologia para resolver problemas de negócio.</h2>
@@ -111,36 +61,14 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="section section--process">
-        <div className="shell">
-          <Reveal>
-            <div className="section-heading section-heading--split">
-              <div><span className="eyebrow">Processo</span><h2>Da primeira conversa à entrega.</h2></div>
-              <p>Um processo direto para entender o problema, tomar decisões cedo e reduzir retrabalho durante a execução.</p>
-            </div>
-          </Reveal>
-          <ol className="process-grid">
-            {[
-              ['01', 'Diagnóstico', 'Entendo objetivo, público, cenário atual e o que precisa mudar.'],
-              ['02', 'Direção', 'Defino arquitetura, mensagem, referências e prioridades do projeto.'],
-              ['03', 'Criação', 'Design e conteúdo são desenvolvidos com validações curtas.'],
-              ['04', 'Construção', 'Desenvolvo, integro e preparo o produto para uso real.'],
-              ['05', 'Revisão', 'Confiro responsividade, conteúdo, acessibilidade, fluxos e acabamento.'],
-            ].map(([n, title, text]) => (
-              <li key={n}><span>{n}</span><h3>{title}</h3><p>{text}</p></li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="closing-cta">
+      <section className="closing-cta closing-cta--blue">
         <div className="shell closing-cta__inner">
           <Reveal>
             <span className="eyebrow eyebrow--light">Vamos conversar?</span>
             <h2>Me conte o que você precisa colocar de pé.</h2>
             <div className="closing-actions">
               <a className="button button--light" href={site.whatsapp} target="_blank" rel="noopener noreferrer">Falar no WhatsApp <ArrowIcon /></a>
-              <Link className="text-link text-link--light" href="/contato">Enviar briefing <ArrowIcon /></Link>
+              <Link className="text-link text-link--light" href="/contato">Prefiro escrever por e-mail <ArrowIcon /></Link>
             </div>
           </Reveal>
         </div>

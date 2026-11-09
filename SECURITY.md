@@ -16,16 +16,15 @@ Essas versões foram escolhidas para sair das faixas vulneráveis conhecidas con
 - Cross-Origin-Opener-Policy
 - JSON-LD com escape de `<`
 - Links externos com `noopener noreferrer`
-- URL de vídeo limitada a HTTPS ou caminho local
 - Limites e validação adicional no formulário
 - Nenhum Server Action, endpoint de API, cookie ou segredo de servidor no projeto
 
 ## Antes de publicar
 Depois de `npm install`, rode:
 
-```powershell
-npm.cmd run security:audit
-npm.cmd run build
+```bash
+npm run security:audit
+npm run build
 ```
 
 Se `npm audit` retornar HIGH ou CRITICAL, não publique antes de revisar.

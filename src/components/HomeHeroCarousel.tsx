@@ -2,14 +2,16 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState, type TouchEvent as ReactTouchEvent } from 'react';
 import { ArrowIcon } from '@/components/ArrowIcon';
+
+const SLIDE_DURATION = 6500;
 
 const slides = [
   {
     eyebrow: 'Tecnologia',
     title: 'Tecnologia que sustenta o negócio.',
-    text: 'Sites, sistemas, dashboards, integrações e automações para organizar operação, reduzir fricção e construir uma base digital mais profissional.',
+    text: 'Sites, sistemas, dashboards, integrações e automações para organizar a operação, reduzir fricção e construir uma base digital mais profissional.',
     href: '/tecnologia',
     cta: 'Explorar tecnologia',
     secondaryHref: '/projetos',
@@ -20,11 +22,11 @@ const slides = [
   {
     eyebrow: 'Marketing',
     title: 'Comunicação que deixa o valor mais fácil de perceber.',
-    text: 'Posicionamento, campanha, conteúdo e presença digital com mensagem clara e direção visual consistente — sem depender de comunicação genérica.',
+    text: 'Posicionamento, campanha, conteúdo e presença digital com mensagem clara e direção visual consistente.',
     href: '/marketing',
     cta: 'Explorar marketing',
-    secondaryHref: '/projetos',
-    secondaryCta: 'Ver portfólio',
+    secondaryHref: '/marketing#estudo-conceitual',
+    secondaryCta: 'Ver estudo conceitual',
     image: 'https://images.unsplash.com/photo-1709281847802-9aef10b6d4bf?auto=format&fit=crop&fm=jpg&q=82&w=2200',
     alt: 'Estação de trabalho de marketing digital com notebook em ambiente organizado',
   },
@@ -32,10 +34,10 @@ const slides = [
     eyebrow: 'Projeto integrado',
     title: 'Estratégia e execução trabalhando na mesma direção.',
     text: 'Quando o problema pede comunicação e tecnologia, mensagem, experiência e desenvolvimento são pensados juntos para evitar remendos entre etapas.',
-    href: '/servicos',
-    cta: 'Conhecer os serviços',
-    secondaryHref: '/contato',
-    secondaryCta: 'Falar sobre um projeto',
+    href: '/contato',
+    cta: 'Falar sobre um projeto',
+    secondaryHref: '/projetos',
+    secondaryCta: 'Ver portfólio',
     image: 'https://images.unsplash.com/photo-1759661990336-51bd4b951fea?auto=format&fit=crop&fm=jpg&q=82&w=2200',
     alt: 'Ambiente de desenvolvimento com múltiplas telas, código e planejamento de interface',
   },
@@ -43,27 +45,26 @@ const slides = [
 
 export function HomeHeroCarousel() {
   const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
-  const reduceMotion = useMemo(
-    () => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-    [],
-  );
 
+  // Avança sozinho, mas para ao passar o mouse, ao focar um controle ou com movimento reduzido.
   useEffect(() => {
-    if (reduceMotion) return;
+    if (paused) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const timer = window.setTimeout(() => {
       setActive((current) => (current + 1) % slides.length);
-    }, 5000);
+    }, SLIDE_DURATION);
     return () => window.clearTimeout(timer);
-  }, [active, reduceMotion]);
+  }, [active, paused]);
 
   const goTo = (index: number) => setActive((index + slides.length) % slides.length);
 
-  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchStart = (event: ReactTouchEvent<HTMLDivElement>) => {
     touchStartX.current = event.touches[0]?.clientX ?? null;
   };
 
-  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchEnd = (event: ReactTouchEvent<HTMLDivElement>) => {
     if (touchStartX.current === null) return;
     const endX = event.changedTouches[0]?.clientX ?? touchStartX.current;
     const distance = endX - touchStartX.current;
@@ -77,9 +78,15 @@ export function HomeHeroCarousel() {
   return (
     <div
       className="home-carousel home-carousel--hero"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Destaques de tecnologia, marketing e projetos integrados"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
-      aria-label="Destaques de tecnologia, marketing e projetos integrados"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
     >
       <div className="home-carousel__viewport">
         {slides.map((slide, index) => (

@@ -1,81 +1,48 @@
 # Lucas Cristofer — Marketing & Tecnologia
 
-Portfólio comercial e técnico em Next.js + React + TypeScript.
+Portfólio comercial e técnico em Next.js (App Router) + React + TypeScript.
 
-## Estrutura atual
+## Páginas
 
-- Home com hero, retrato real, CTA para Portfólio e WhatsApp.
-- Seção **Quem sou eu** sem vídeo no primeiro deploy.
-- Portfólio com EVO Gestão e POUPEME como projetos reais.
-- Case público do EVO exibe apenas dados demonstrativos fictícios; dados pessoais reais não são publicados.
-- Página individual para cada case com duas camadas de leitura:
-  - visão de produto: problema, direção, escopo e stack;
-  - visão técnica: arquitetura, decisões, trade-offs, segurança, manutenção, deploy e próximos passos.
-- Marketing e Tecnologia com páginas próprias.
-- Projeto conceitual de Marketing apresentado com contexto, sem cliente ou resultado inventado.
-- Cards de Marketing empilhados no mobile para evitar cortes e falso overflow.
-- Navegação com Home, Portfólio, Tecnologia, Marketing, Sobre e Contato.
-- Hover preto com texto branco nos links da navegação desktop.
-- Instagram, LinkedIn e GitHub integrados.
-- Botão flutuante de WhatsApp para `+55 41 98822-3578`.
-- Contato com formulário via `mailto:` e canais diretos.
-- SEO com metadata por página, Open Graph, Twitter card, JSON-LD, sitemap e robots.
-- Acessibilidade com skip link, foco visível, alt text, landmarks e suporte a `prefers-reduced-motion`.
+- **Home** — hero em carrossel, projetos em destaque, quem sou eu e contato.
+- **Portfólio** — EVO Gestão e POUPEME, cada um com estudo de caso em duas camadas: visão de produto (problema, direção, escopo, stack) e visão técnica (arquitetura, decisões, trade-offs, segurança, manutenção, deploy e próximos passos).
+- **Tecnologia** e **Marketing** — o que faço em cada frente, com os serviços de cada uma. A antiga página Serviços foi incorporada a elas e `/servicos` redireciona para `/tecnologia`.
+- **Sobre** e **Contato** — formulário via `mailto:` e canais diretos (WhatsApp e e-mail).
+
+O EVO Gestão exibe apenas dados fictícios; dados pessoais reais não são publicados. O projeto de marketing é um estudo conceitual, sem cliente ou resultado inventado.
+
+## Recursos
+
+- SEO: metadata por página, Open Graph e Twitter card (imagem 1200×630 gerada em `opengraph-image.tsx`), JSON-LD, sitemap e robots.
+- Acessibilidade: skip link, foco visível, landmarks, alt text, `prefers-reduced-motion` e carrossel que pausa em hover/foco.
+- Segurança: veja `SECURITY.md`.
 
 ## Imagens
 
-O projeto usa somente fotos fornecidas pelo próprio Lucas:
+Somente fotos fornecidas pelo próprio Lucas (`public/images/lucas-hero.webp` e `lucas-about.webp`) e imagens de capa do Unsplash no hero da home.
 
-- `public/images/lucas-hero.webp`
-- `public/images/lucas-about.webp`
+## Rodar localmente
 
-Nenhuma imagem de pessoa foi gerada por IA.
-
-## Rodar no Windows
-
-No PowerShell, dentro da pasta:
-
-```powershell
-npm.cmd install
-npm.cmd run dev
+```bash
+npm install
+npm run dev
 ```
 
-Abra `http://localhost:3000`.
+Abra `http://localhost:3000`. No Windows, `install.cmd`, `dev.cmd` e `build.cmd` fazem o mesmo.
 
-Para validar produção:
+## Validar antes de publicar
 
-```powershell
-npm.cmd run security:audit
-npm.cmd run build
-npm.cmd run start
+```bash
+npm run typecheck
+npm run qa:source
+npm run security:audit
+npm run build
 ```
 
-Também existem `install.cmd`, `dev.cmd` e `build.cmd` na raiz.
+`qa:source` confere imports internos, um `<h1>` por página, metadata, rotas internas válidas e conteúdo obrigatório.
 
-## Vídeo de apresentação
-
-O componente foi preservado, mas a seção não é renderizada no primeiro deploy.
-
-Quando o vídeo estiver pronto, veja os comentários em:
-
-- `src/app/page.tsx`
-- `src/app/sobre/page.tsx`
-- `src/components/VideoShowcase.tsx`
-
-A variável preparada é:
-
-```env
-NEXT_PUBLIC_INTRO_VIDEO_URL=/media/apresentacao.mp4
-```
-
-## URL de produção / SEO
-
-Quando o domínio estiver definido:
+## URL de produção
 
 ```env
 NEXT_PUBLIC_SITE_URL=https://seu-dominio.com.br
 ```
-
-## QA
-
-Veja `QA.md` para a validação executada e as limitações do ambiente.

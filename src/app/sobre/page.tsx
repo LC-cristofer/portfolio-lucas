@@ -2,8 +2,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowIcon } from '@/components/ArrowIcon';
-import { Reveal } from '@/components/Reveal';
-// import { VideoShowcase } from '@/components/VideoShowcase'; // Reativar junto com a seção comentada abaixo.
 
 export const metadata: Metadata = {
   title: 'Sobre',
@@ -25,22 +23,6 @@ export default function AboutPage() {
           </figure>
         </div>
       </section>
-
-      {/*
-        Seção de apresentação em vídeo temporariamente oculta para o primeiro deploy.
-        Reative este bloco quando o vídeo final estiver pronto e reative o import de VideoShowcase.
-
-        <section className="section section--about-video">
-          <div className="shell about-video-grid">
-            <Reveal className="about-video-copy">
-              <span className="eyebrow">Apresentação</span>
-              <h2>Minha forma de pensar, em poucos minutos.</h2>
-              <p>Trajetória, processo e o tipo de problema que gosto de resolver.</p>
-            </Reveal>
-            <Reveal delay={70}><VideoShowcase /></Reveal>
-          </div>
-        </section>
-      */}
 
       <section className="section section--principles">
         <div className="shell principles-grid">
